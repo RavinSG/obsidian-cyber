@@ -1,0 +1,1 @@
+ This domain focuses on managing and securing digital and physical assets, as well as the storage, maintenance, retention, and destruction of data.

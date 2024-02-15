@@ -1,0 +1,1 @@
+Security controls are *safeguards designed to reduce specific security risks*. So they are used alongside [[Security Frameworks|frameworks]] to ensure that security goals and processes are implemented correctly and that organisations meet regulatory compliance requirements.

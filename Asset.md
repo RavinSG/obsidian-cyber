@@ -1,0 +1,1 @@
+An item perceived as having value to an organization

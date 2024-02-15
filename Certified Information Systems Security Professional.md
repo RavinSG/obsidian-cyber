@@ -8,7 +8,7 @@ There are 8 CISSP domains
 - [[Security Architecture and Engineering]]
 - [[Communications and Network Security]]
 - [[Identity and Access Management]]
-- Security Assessment and Testing
+- [[Security Assessment and Testing]]
 - [[Security Operations]]
 - Software Development Security
 

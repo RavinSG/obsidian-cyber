@@ -1,0 +1,1 @@
+Data is accessible to those who are authorised to access it

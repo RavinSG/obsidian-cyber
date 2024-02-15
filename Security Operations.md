@@ -1,0 +1,1 @@
+This domain is focused on conducting investigations and implementing preventative measures. Following company policies and procedures to stop the potential threat is an example of taking preventative measures.

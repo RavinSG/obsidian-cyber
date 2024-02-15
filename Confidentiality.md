@@ -1,0 +1,1 @@
+øOnly authorised users can access specific assets or data

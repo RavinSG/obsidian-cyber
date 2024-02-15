@@ -2,6 +2,6 @@
 aliases:
   - CIA
 ---
-- Confidentiality
-- Integrity
-- Availability 
+- [[Confidentiality]]
+- [[Integrity]]
+- [[Availability]] 
