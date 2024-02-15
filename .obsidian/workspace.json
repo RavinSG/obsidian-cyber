@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "playboo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -82,7 +82,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -205,7 +206,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e1e19754baea0c42",
+  "active": "f03ddab39f400ca3",
   "lastOpenFiles": [
     "Network Protocol Analysers.md",
     "Playbooks.md",
