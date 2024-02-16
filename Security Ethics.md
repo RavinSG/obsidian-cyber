@@ -4,7 +4,7 @@ Having a strong sense of ethics can help you navigate your decisions as a cybers
 
 ### Ethical principles and methodologies
 
-Because [[Counterattacks]] are generally disapproved of or illegal, the security realm has created frameworks and controls—such as the confidentiality, integrity, and availability (CIA) triad—to address issues of confidentiality, privacy protections, and laws.
+Because [[Counterattacks]] are generally disapproved of or illegal, the security realm has created frameworks and controls—such as the confidentiality, integrity, and availability ([[Foundational Security Model|CIA]]) triad—to address issues of confidentiality, privacy protections, and laws.
 
 **[[Confidentiality]]** means that only authorised users can access specific assets or data. Confidentiality as it relates to professional ethics means that there needs to be a high level of respect for privacy to safeguard private assets and data.
 
