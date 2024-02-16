@@ -1,1 +1,6 @@
- This domain focuses on managing and securing digital and physical assets, as well as the storage, maintenance, retention, and destruction of data.
+
+Asset security involves managing the cybersecurity processes of organisational assets, including the *storage, maintenance, retention, and destruction* of physical and virtual data. 
+
+Because the loss or theft of assets can expose an organization and increase the level of risk, keeping track of assets and the data they hold is essential. Conducting a security impact analysis, establishing a recovery plan, and managing data exposure will depend on the level of risk associated with each asset. 
+
+Security analysts may need to store, maintain, and retain data by creating backups to ensure they are able to *restore the environment* if a security incident places the organisation’s data at risk.

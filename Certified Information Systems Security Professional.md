@@ -10,7 +10,7 @@ There are 8 CISSP domains
 - [[Identity and Access Management]]
 - [[Security Assessment and Testing]]
 - [[Security Operations]]
-- Software Development Security
+- [[Software Development Security]]
 
 The domains can help better understand how a security analyst's job duties can be organised into categories. Additionally, the domains can help establish an understanding of how to manage risk.
 
