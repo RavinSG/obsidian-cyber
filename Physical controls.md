@@ -7,7 +7,7 @@ Examples of physical controls:
 
 | **Control Name** | **Control Type** | **Control Purpose** |
 | :--- | :--: | :--: |
-| Time-controlled safe | Deterrent | Reduce attack surface and overall impact from <br>physical threats |
+| Time-controlled safe | Deterrent | Reduce attack surface and overall impact from physical threats |
 | Closed-circuit television (CCTV) | Preventative / Detective | Closed circuit television is both a preventative <br>and detective control because it’s presence can <br>reduce risk of certain types of events from occurring, and can be used after an <br>event to inform on event conditions |
 | Locking cabinets (for<br>network gear) | Preventative | Bolster integrity by preventing unauthorised<br>personnel and other individuals from physically<br>accessing or modifying network infrastructure gear<br> |
 | Signage indicating alarm<br>service provider | Deterrent | Deter certain types of threats by making the <br>likelihood of a successful attack seem low  |

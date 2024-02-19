@@ -4,7 +4,7 @@ aliases:
 ---
 OWASP security principles include:
 
-- *Minimise attack surface area*: Attack surface refers to all the potential vulnerabilities a threat actor could exploit.
+- *Minimise attack surface area*: [[Attack Surface]] refers to all the potential vulnerabilities a threat actor could exploit.
 
  - *Principle of least privilege*: Users have the least amount of access required to perform their everyday tasks.
 

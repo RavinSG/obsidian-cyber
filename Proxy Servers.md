@@ -5,4 +5,4 @@ A proxy server is another way to add security to your private network. Proxy ser
 
 **Reverse proxies** function opposite of forward proxies; they handle requests from external systems to services on the internal network. 
 
-Some proxy servers can also be configured with rules, like a [[Firewall]].  For example, you can create filters to block websites identified as containing malware.
+Some proxy servers can also be configured with rules, like a Firewall. For example, you can create filters to block websites identified as containing malware.

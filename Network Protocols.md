@@ -41,4 +41,3 @@ Security protocols are network protocols that ensure that *data is sent and rece
 
 - [[Network Address Translation]] (**NAT**)
 - [[Address Resolution Protocol]] (**ARP**)
-- 

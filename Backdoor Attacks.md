@@ -1,0 +1,4 @@
+
+In cybersecurity, backdoors are *weaknesses intentionally left by programmers or system and network administrators* that bypass normal access control mechanisms. Backdoors are intended to help programmers conduct troubleshooting or administrative tasks. However, backdoors can also be installed by attackers after they’ve compromised an organization to ensure they have persistent access.
+
+Once the hacker has entered an insecure network through a backdoor, they can cause extensive damage: *installing malware, performing a denial of service (DoS) attack, stealing private information or changing other security settings* that leaves the system vulnerable to other attacks. A DoS attack is an attack that targets a network or server and floods it with network traffic.

@@ -2,7 +2,6 @@
 aliases:
   - CSP
 ---
-
 **Cloud computing**, refers to the practice of using remote servers, applications, and network services that are hosted on the internet instead of at a physical location owned by the company.
 
 A *cloud service provider* (CSP) is a company that offers cloud computing services. These companies own large data centres in locations around the globe that house millions of servers. Data centres provide technology services, such as storage, and compute at such a large scale that they can sell their services to other companies for a fee. 

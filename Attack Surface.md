@@ -1,0 +1,1 @@
+All the potential vulnerabilities that a threat actor could exploit
