@@ -12,3 +12,14 @@ There are different factors that can affect the likelihood of a risk to an organ
 - **Multiparty risk**: Outsourcing work to third-party vendors can give them access to intellectual property, such as trade secrets, software designs, and inventions.
 
 - **Software compliance/licensing**: Software that is not updated or in compliance, or patches that are not installed in a timely manner
+
+One way to interpret risk is to consider the potential effects that negative events can have on a business. Another way to present this idea is with this calculation:
+$$Likelihood \times Impact = Risk$$
+
+In general, we calculate risk in this field to help:
+
+- Prevent costly and disruptive events
+- Identify improvements that can be made to systems and processes
+- Determine which risks can be tolerated
+- Prioritise the critical assets that require attention
+
