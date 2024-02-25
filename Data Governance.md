@@ -1,4 +1,4 @@
-**Data governance** is a set of processes that define *how an organization manages information*. Governance often includes policies that specify how to keep **data private, accurate, available, and secure** throughout its lifecycle.
+**Data governance** is a set of processes that define *how an organisation manages information*. Governance often includes policies that specify how to keep **data private, accurate, available, and secure** throughout its lifecycle.
 
 Effective data governance is a collaborative activity that relies on people. Data governance policies commonly categorise individuals into a specific role:
 

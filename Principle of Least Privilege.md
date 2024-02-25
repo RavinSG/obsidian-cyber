@@ -1,6 +1,7 @@
 ---
 aliases:
   - PoLP
+  - least privilege
 ---
 The **principle of least privilege** is a security concept in which a user is only granted the *minimum level of access* and authorisation required to complete a task or function.
 

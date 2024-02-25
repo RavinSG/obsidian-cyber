@@ -13,7 +13,7 @@ Some common measures organisations use to prevent brute force attacks and simila
 
 - **Salting and hashing**: Hashing converts information into a unique value that can then be used to determine its integrity. It is a *one-way function*, meaning it is impossible to decrypt and obtain the original text. Salting adds random characters to the passwords.
 
-- **Multi-factor authentication (MFA) and two-factor authentication (2FA)**: MFA is a security measure which requires a user to verify their identity in two or more ways to access a system or network. This verification happens using a combination of authentication factors: a username and password, fingerprints, facial recognition, or a one-time password (OTP) sent to a phone number or email. 2FA is similar to MFA, except it uses only two forms of verification.
+- **Multi-factor authentication ([[Multi-factor Authentication|MFA]]) and two-factor authentication (2FA)**: MFA is a security measure which requires a user to verify their identity in two or more ways to access a system or network. This verification happens using a combination of authentication factors: a username and password, fingerprints, facial recognition, or a one-time password (OTP) sent to a phone number or email. 2FA is similar to MFA, except it uses only two forms of verification.
 
 - **CAPTCHA and reCAPTCHA**: CAPTCHA stands for *Completely Automated Public Turing test to tell Computers and Humans Apart*. It asks users to complete a simple test that proves they are human. This helps prevent software from trying to brute force a password. reCAPTCHA is a free CAPTCHA service from Google that helps protect websites from bots and malicious software.
 
