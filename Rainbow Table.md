@@ -1,0 +1,1 @@
+A **rainbow table** is a file of pre-generated hash values and their associated plaintext. They’re like dictionaries of weak passwords. Attackers capable of obtaining an organisation’s password database can use a rainbow table to compare them against all possible values.
