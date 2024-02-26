@@ -1,4 +1,5 @@
 ---
 aliases:
   - SSL
+  - SSL/TLS
 ---
