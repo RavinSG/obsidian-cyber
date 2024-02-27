@@ -1,0 +1,2 @@
+
+An incident is an occurrence that actually or imminently jeopardises, without lawful authority, the confidentiality, integrity, or availability of information or an information system; or constitutes a violation or imminent threat of violation of law, security policies, security procedures, or acceptable use policies.
