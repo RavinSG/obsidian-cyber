@@ -2,7 +2,7 @@
 The **NIST incident response lifecycle** is another [[National Institute of Standards and Technology|NIST]] framework with additional sub-steps *dedicated to incident response*. This is a framework for incident response consisting of four phases:
 
 - Preparation
-- Detection and Analysis
+- [[Detection and Analysis]]
 - Containment, Eradication, and Recovery
 - Post-incident activity
 
