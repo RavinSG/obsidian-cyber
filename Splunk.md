@@ -12,3 +12,7 @@ The incident review dashboard allows analysts to identify suspicious patterns th
 
 #### Risk analysis dashboard
 The risk analysis dashboard helps analysts identify risk for each risk object (e.g., a specific user, a computer, or an IP address). It shows changes in risk-related activity or behaviour, such as a user logging in outside of normal working hours or unusually high network traffic from a specific computer. A security analyst might use this dashboard to analyse the potential impact of vulnerabilities in critical assets, which helps analysts prioritise their risk mitigation efforts.
+
+### Splunk searches
+
+Splunk has its own querying language called *Search Processing Language* (SPL). SPL is used to search and retrieve events from indexes using Splunk’s Search & Reporting app. An SPL search can contain many different commands and arguments. For example, you can use commands to transform your search results into a chart format or filter results for specific information. 
