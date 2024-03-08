@@ -1,4 +1,8 @@
 
 This model explains the three key threats to cybersecurity efforts: **Disclosure**, **Alteration**, and **Denial**.
 
-- Disclosure is the exposure of sensitive information to unauthorised individuals. 
+- *Disclosure* is the exposure of sensitive information to unauthorised individuals, otherwise known as *data loss*. Disclosure is a violation of the principle [[Confidentiality]] Attackers who gain access to sensitive information and remove it from the organisation are said be performing **data exfiltration**. Disclosure may also occur by accident, when an administrator misconfigures access controls or an employee loses a device.
+
+- *Alteration* is the unauthorised modification of information and is a violation of the principle of [[Integrity]]. Attackers may seek to modify records contained in a system for financial gains such as adding fraudulent transactions. Alteration may also occur as a result of natural activity such as a *bit flip*. Accidental alteration is also possible, if users unintentionally modifies information stored in a critical system as the result of a typo.
+
+- *Denial* is the disruption of an authorised user's legitimate access to information. Denial events violate the principle of [[Availability]]. This availability loss may be **intentional**, such as when an *attacker launches a distributed denial-of-service (DDoS) attack* against a website. Denial may also occur as the result of **accidental** activity, such as the *failure of a critical server, or as the result of natural activity*, such as a natural disaster impacting a communications circuit
