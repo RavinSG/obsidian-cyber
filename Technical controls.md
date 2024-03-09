@@ -1,5 +1,4 @@
-**Technical controls** consist of solutions such as firewalls, intrusion detection systems (IDS), intrusion prevention systems (IPS), antivirus (AV) products, encryption, etc. Technical controls can be used in a number of ways to meet organisational goals and
-objectives.
+**Technical controls** consist of solutions such as firewalls, intrusion detection systems (IDS), intrusion prevention systems (IPS), antivirus (AV) products, encryption, etc. Technical controls can be used in a number of ways to meet organisational goals and objectives. They also *enforce confidentiality, integrity, and availability in the digital space*.
 
 Examples of technical controls:
 

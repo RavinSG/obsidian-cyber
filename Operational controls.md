@@ -1,0 +1,1 @@
+Operational controls include the processes that we put in place to manage technology in a secure manner. These include user access reviews, log monitoring, and vulnerability management.

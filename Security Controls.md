@@ -4,17 +4,22 @@ For example, a control that can be used alongside frameworks to ensure a hospita
 
 There are three main categories of controls:
 
-- [[Administrative controls|Administrative/Managerial controls|]]
+- [[Managerial controls]]
 - [[Technical controls]]
+- [[Operational controls]]
 - [[Physical controls]]
 
 ### Control types
 
 Control types include, but are not limited to:
 
-- Preventative - prevent an incident from occurring in the first place
-- Corrective - restore an asset after an incident
-- Detective - determine whether an incident has occurred or is in progress
-- Deterrent - discourage attacks
+- *Preventative* - intend to stop a security issue before it occurs. Firewalls and encryption are examples of preventive controls.
+- *Corrective* - remediate security issues that have already occurred. Restoring backups after a ransomware attack is an example of a corrective control.
+- *Detective* - identify security events that have already occurred. Intrusion detection systems are detective controls.
+- *Deterrent* - seek to prevent an attacker from attempting to violate security policies. Vicious guard dogs and barbed wire fences are examples of deterrent controls.
+- *Compensating* - controls designed to mitigate the risk associated with exceptions made to a security policy. ^comp
+- *Directive* - inform employees and others what they should do to achieve security objectives. Policies and procedures are examples of directive controls
 
 These controls work together to provide defence in depth and protect assets.
+
+![[Security Controls.jpeg]]
