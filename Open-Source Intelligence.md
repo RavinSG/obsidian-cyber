@@ -21,3 +21,14 @@ Public sources:
 - The SANS Internet Storm Center: `isc.sans.org `
 - VirusShare contains details about malware uploaded to VirusTotal: `virusshare.com`
 - Spamhaus focuses on block lists, including spam via the Spamhaus Block List (SBL), hijacked and compromised computers on the Exploits Block List (XBL), the Policy Block List (PBL), the Don't Route or Peer lists (DROP) listing netblocks that you may not want to allow traffic from, and a variety of other information: www.spamhaus.org
+
+
+### Proprietary and Closed-Source Intelligence
+
+*Commercial security vendors, government organisations, and other security-centric organisations* also create and make use of proprietary, or closed-source intelligence. They do their own information gathering and research, and they may use custom tools, analysis models, or other proprietary methods to gather, curate, and maintain their threat feeds.
+
+There are a number of reasons that proprietary threat intelligence may be used. The organization *may want to keep their threat data secret*, they *may want to sell or license it* and their methods and sources are their trade secrets, or they *may not want to take the chance of the threat actors knowing* about the data they are gathering.
+
+> [!tip] Tip
+> You may want to have multiple feeds that you can check against each other—often one feed may be faster or release information sooner, so multiple good-quality, reliable feeds can be a big help!.
+
