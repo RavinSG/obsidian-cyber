@@ -1,9 +1,9 @@
 
 Threat intelligence is the *set of activities and resources available to cybersecurity professionals seeking to learn about changes in the threat environment*.
 
-*Building a threat intelligence program* is a crucial part of any organisation's approach to cybersecurity. If you're not familiar with current threats, you won't be able to build appropriate defences to protect your organization against those threats. Threat intelligence information can also be used for *predictive analysis to identify likely risks* to the organization.
+*Building a threat intelligence program* is a crucial part of any organisation's approach to cybersecurity. If you're not familiar with current threats, you won't be able to build appropriate defences to protect your organisation against those threats. Threat intelligence information can also be used for *predictive analysis to identify likely risks* to the organisation.
 
-**Threat feeds** are intended to provide up-to-date detail about threats in a way that your organization can leverage. Threat feeds often include technical details about threats, such as IP addresses, hostnames and domains, email addresses, URLs, file hashes, file paths, CVE numbers, and other details about a threat.
+**Threat feeds** are intended to provide up-to-date detail about threats in a way that your organisation can leverage. Threat feeds often include technical details about threats, such as IP addresses, hostnames and domains, email addresses, URLs, file hashes, file paths, CVE numbers, and other details about a threat.
 
 **Vulnerability databases** are also an essential part of an organisation's threat intelligence program. Reports of vulnerabilities certainly help direct an organisation's defensive efforts, but they also provide valuable insight into the types of exploit being discovered by researchers.
 
