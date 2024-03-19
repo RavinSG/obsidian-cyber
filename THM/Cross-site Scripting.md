@@ -103,4 +103,4 @@ Now after we submit a support ticket with the above payload, when a staff member
 
 ![[XSS Netcat catch.png]]
 
-Then we can use a base64 decoder website to decode it.
+Then we can use a base64 decoder to decode it.
