@@ -1,0 +1,1 @@
+*Pretexting* is the process of using a made-up scenario to justify why you are approaching an individual. Pretexting is often used as part of impersonation efforts to make the impersonator more believable. However, an aware target can ask questions or require verification that can help defeat pretexting like simply making a verification call.

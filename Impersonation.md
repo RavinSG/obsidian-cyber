@@ -1,0 +1,3 @@
+**Identity fraud**, or **identity theft**, is the use of someone else's identity. Although identity fraud is typically used for financial gain by malicious actors, identity fraud may be used as part of penetration tests or other security efforts as well. 
+
+In fact, in some cases impersonation, where you act as if you are someone else, can be a limited form of identity fraud. In other cases, impersonation is *less specific*, and the social engineer or attacker who uses it may simply *pretend to be a delivery driver* or an employee of a service provider rather than claiming a specific identity.
