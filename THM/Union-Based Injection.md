@@ -42,7 +42,7 @@ We now see where the number 3 was previously displayed; it now shows the name of
 Our next query will gather a list of tables that are in this database.
 
 ```SQL
-0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = 'sqli_one'
+0 UNION SELECT 1,2,t FROM information_schema.tables WHERE table_schema = 'sqli_one'
 ```
 
 The method `group_concat()` gets the specified column (in this case, table_name) from multiple returned rows and puts it into one string separated by commas. 
