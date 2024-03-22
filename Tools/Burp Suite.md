@@ -12,7 +12,7 @@ Burp Suite provides an impressive array of tools that are highly valuable for we
 
 - **[[Burp Repeater|Repeater]]**: Another well-known feature. Repeater allows for capturing, modifying, and resending the same request multiple times. This functionality is particularly useful when crafting payloads through trial and error (e.g., in SQLi - Structured Query Language Injection) or testing the functionality of an endpoint for vulnerabilities.
 
-- **Intruder**: Despite rate limitations in Burp Suite Community, Intruder allows for spraying endpoints with requests. It is commonly utilised for brute-force attacks or fuzzing endpoints.
+- **[[Burp Intruder|Intruder]]**: Despite rate limitations in Burp Suite Community, Intruder allows for spraying endpoints with requests. It is commonly utilised for brute-force attacks or fuzzing endpoints.
 
 - **Decoder**: Decoder offers a valuable service for data transformation. It can decode captured information or encode payloads before sending them to the target. While alternative services exist for this purpose, leveraging Decoder within Burp Suite can be highly efficient.
 
