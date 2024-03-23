@@ -10,7 +10,7 @@ Our initial goal is to find a way to get access to the `http://10.10.181.83/supp
 
 We can see that there are no protective measure implemented in the form. Hence we can take a brute force approach to crack the login page.
 
-However, due to a data-leak the usernames and passwords of the company was leaked fe months ago and this leaked list can be downloaded through:
+However, due to a data-leak the usernames and passwords of the company was leaked few months ago and this leaked list can be downloaded through:
 `wget http://10.10.181.83:9999/Credentials/BastionHostingCreds.zip`
 
 ![[Credentials.png]]
