@@ -14,11 +14,13 @@ Burp Suite provides an impressive array of tools that are highly valuable for we
 
 - **[[Burp Intruder|Intruder]]**: Despite rate limitations in Burp Suite Community, Intruder allows for spraying endpoints with requests. It is commonly utilised for brute-force attacks or fuzzing endpoints.
 
-- **Decoder**: Decoder offers a valuable service for data transformation. It can decode captured information or encode payloads before sending them to the target. While alternative services exist for this purpose, leveraging Decoder within Burp Suite can be highly efficient.
+- **[[Burp Decoder|Decoder]]**: Decoder offers a valuable service for data transformation. It can decode captured information or encode payloads before sending them to the target. While alternative services exist for this purpose, leveraging Decoder within Burp Suite can be highly efficient.
 
-- **Comparer**: As the name suggests, Comparer enables the comparison of two pieces of data at either the word or byte level. While not exclusive to Burp Suite, the ability to send potentially large data segments directly to a comparison tool with a single keyboard shortcut significantly accelerates the process.
+- **[[Burp Comparer|Comparer]]**: As the name suggests, Comparer enables the comparison of two pieces of data at either the word or byte level. While not exclusive to Burp Suite, the ability to send potentially large data segments directly to a comparison tool with a single keyboard shortcut significantly accelerates the process.
 
-- **Sequencer**: Sequencer is typically employed when assessing the randomness of tokens, such as session cookie values or other supposedly randomly generated data. If the algorithm used for generating these values lacks secure randomness, it can expose avenues for devastating attacks.
+- **[[Burp Sequencer|Sequencer]]**: Sequencer is typically employed when assessing the randomness of tokens, such as session cookie values or other supposedly randomly generated data. If the algorithm used for generating these values lacks secure randomness, it can expose avenues for devastating attacks.
+
+- **[[Burp Organizer|Organizer]]**: The organizer helps store and annotate copies of HTTP requests that we may want to revisit later. This tool can be particularly useful for organising your penetration testing workflow.
 
 The Burp Dashboard is divided into four quadrants:
 
