@@ -151,3 +151,8 @@ A quick comparison between the output of nslookup and dig shows that dig returne
 ## [[DNSDumpster]]
 
 ## [[Shodan.io]]
+
+
+### War Driving
+
+One common goal of penetration testers is to identify wireless networks that may present a means of gaining access to an internal network of the target without gaining physical access to the facility. Testers use a technique called *war driving*, where they *drive by facilities in a car equipped with high-end antennas* and attempt to eavesdrop on or connect to wireless networks. Recently, testers have expanded this approach to the use of drones and unmanned aerial vehicles (UAVs) in a technique known as *war flying*.
