@@ -39,4 +39,4 @@ Viewing the page source of the avatar form, we see that the currently set avatar
 
 Decoding the string provides us with `THM{YOU_WORKED_OUT_THE_SSRF}`.
 
-[[Server Side Request Forgery|SSRF]]
+[[Server Side Request Forgery|SSRF]] 

@@ -16,4 +16,3 @@ Now, enter some legitimate data into the support form. For example: `pentester@e
 Submit the form — the *request should be intercepted by the proxy*.
 
 With the request captured in the proxy, we can now change the email field to be our very simple payload from above: `<script>alert("Succ3ssful XSS")</script>`. After pasting in the payload, we need to select it, then *URL encode* it with the `Ctrl + U` shortcut to make it safe to send.
-
