@@ -36,5 +36,6 @@ When no host discovery options are provided, Nmap follows the following approach
 
 - When an *unprivileged user* tries to scan targets *outside the local network*, Nmap resorts to a **TCP 3-way handshake** by sending SYN packets to ports 80 and 443.
 
-[[Host Discovery using ARP]]
+- [[Host Discovery using ARP]]
+- [[Host Discovery Using ICMP]]
 

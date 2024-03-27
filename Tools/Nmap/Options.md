@@ -4,8 +4,23 @@
 - `10.11.12.15-20` will scan 6 IP addresses, from `10.11.12.15` to `10.11.12.20`
 - `10.11.12.15/30` will scan 4 IP addresses, from `10.11.12.12` to `10.11.12.15`
 
-### Flags
+### Target Specification
 
-- `-sL`: List the targets that will be scanned without scanning them
-- `-n `: Do not perform reverse-DNS resolution on the targets 
-- `-iL`: Read targets from the file specified
+`-iL <inputfilename>`: Input from list of hosts/networks
+`-iR <num hosts>`: Choose random targets
+`--exclude <host1[,host2][,host3],...>`: Exclude hosts/networks
+`--excludefile <exclude_file>`: Exclude list from file
+
+### HOST DISCOVERY
+
+`-sL`: List Scan - simply list targets to scan
+`-sn`: Ping Scan - disable port scan
+`-Pn`: Treat all hosts as online -- skip host discovery
+`-PS/PA/PU/PY[portlist]`: TCP SYN/ACK, UDP or SCTP discovery to given ports
+`-PE/PP/PM`: ICMP echo, timestamp, and netmask request discovery probes
+`-PO[protocol list]`: IP Protocol Ping
+`-n/-R`: Never do DNS resolution/Always resolve [default: sometimes]
+`--dns-servers <serv1[,serv2],...>`: Specify custom DNS servers
+`--system-dns`: Use OS's DNS resolver
+`--traceroute`: Trace hop path to each host
+
