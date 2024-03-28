@@ -38,4 +38,5 @@ When no host discovery options are provided, Nmap follows the following approach
 
 - [[Host Discovery using ARP]]
 - [[Host Discovery Using ICMP]]
+- [[Host Discovery Using TCP and UDP]]
 
