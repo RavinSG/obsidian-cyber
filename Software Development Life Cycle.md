@@ -26,3 +26,4 @@ The software development life cycle (SDLC) *describes the steps in a model for s
 
 ### [[Deployment Environments]]
 
+### [[DevSecOps and DevOps]]
