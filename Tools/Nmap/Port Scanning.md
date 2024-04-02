@@ -39,3 +39,52 @@ We can specify the ports we want to scan instead of the default 1000 ports. Spec
 - If we want to scan the most *common 100 ports*, add `-F`. Using `--top-ports 10` will check the **ten most common ports**.
 
 ### [[Spoofing and Decoy]]
+
+### [[Idle-Zombie Scan|Idle/Zombie Scan]]
+
+### Getting More Details
+
+We might consider adding `--reason` if we want Nmap to provide more details regarding its reasoning and conclusions. Consider the two scans below to the system; however, the latter adds `--reason`.
+
+```bash
+pentester@TryHackMe$ sudo nmap -sS 10.10.252.27
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2021-08-30 10:39 BST
+Nmap scan report for ip-10-10-252-27.eu-west-1.compute.internal (10.10.252.27)
+Host is up (0.0020s latency).
+Not shown: 994 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+25/tcp  open  smtp
+80/tcp  open  http
+110/tcp open  pop3
+111/tcp open  rpcbind
+143/tcp open  imap
+MAC Address: 02:45:BF:8A:2D:6B (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.60 seconds
+```
+
+```bash
+pentester@TryHackMe$ sudo nmap -sS --reason 10.10.252.27
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2021-08-30 10:40 BST
+Nmap scan report for ip-10-10-252-27.eu-west-1.compute.internal (10.10.252.27)
+Host is up, received arp-response (0.0020s latency).
+Not shown: 994 closed ports
+Reason: 994 resets
+PORT    STATE SERVICE REASON
+22/tcp  open  ssh     syn-ack ttl 64
+25/tcp  open  smtp    syn-ack ttl 64
+80/tcp  open  http    syn-ack ttl 64
+110/tcp open  pop3    syn-ack ttl 64
+111/tcp open  rpcbind syn-ack ttl 64
+143/tcp open  imap    syn-ack ttl 64
+MAC Address: 02:45:BF:8A:2D:6B (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.59 seconds
+```
+
+Providing the` --reason` flag gives us the *explicit reason why Nmap concluded* that the system is up or a particular port is open. In this console output above, we can see that this system is considered online because Nmap “received arp-response.” 
+
+On the other hand, we know that the SSH port is deemed to be open because Nmap received a “syn-ack” packet back.
