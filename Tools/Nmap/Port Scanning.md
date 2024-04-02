@@ -38,3 +38,4 @@ We can specify the ports we want to scan instead of the default 1000 ports. Spec
 - We can request the scan of *all ports* by using `-p-`, which will *scan all 65535 ports*. 
 - If we want to scan the most *common 100 ports*, add `-F`. Using `--top-ports 10` will check the **ten most common ports**.
 
+### [[Spoofing and Decoy]]
