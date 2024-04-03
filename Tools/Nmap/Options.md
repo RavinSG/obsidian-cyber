@@ -35,3 +35,20 @@
 `-sO`: IP protocol scan
 `-b <FTP relay host>`: FTP bounce scan
 
+### PORT SPECIFICATION AND SCAN ORDER
+
+`-p <port ranges>`: Only scan specified ports
+	Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
+`--exclude-ports <port ranges>`: Exclude the specified ports from scanning
+`-F`: Fast mode - Scan fewer ports than the default scan
+`-r`: Scan ports sequentially - don't randomise
+`--top-ports <number>`: Scan `<number>` most common ports
+`--port-ratio <ratio>`: Scan ports more common than `<ratio>`
+
+### SERVICE/VERSION DETECTION
+
+`-sV`: Probe open ports to determine service/version info
+`--version-intensity <level>`: Set from 0 (light) to 9 (try all probes)
+`--version-light`: Limit to most likely probes (intensity 2)
+`--version-all`: Try every single probe (intensity 9)
+`--version-trace`: Show detailed version scan activity (for debugging)

@@ -15,6 +15,7 @@ However, in practical situations, we need to consider the *impact of firewalls*.
 - **Open|Filtered**: This means that Nmap cannot determine whether the port is *open or filtered*.
 - **Closed|Filtered**: This means that Nmap cannot decide whether a port is *closed or filtered*.
 
+#### Scan types 
 We can use the [[TCP Flags]] to perform various kinds of scans.
 
 - [[TCP Connect Scan]]
@@ -38,9 +39,9 @@ We can specify the ports we want to scan instead of the default 1000 ports. Spec
 - We can request the scan of *all ports* by using `-p-`, which will *scan all 65535 ports*. 
 - If we want to scan the most *common 100 ports*, add `-F`. Using `--top-ports 10` will check the **ten most common ports**.
 
-### [[Spoofing and Decoy]]
+#### [[Spoofing and Decoy]]
 
-### [[Idle-Zombie Scan|Idle/Zombie Scan]]
+#### [[Idle-Zombie Scan|Idle/Zombie Scan]]
 
 ### Getting More Details
 
@@ -88,3 +89,6 @@ Nmap done: 1 IP address (1 host up) scanned in 1.59 seconds
 Providing the` --reason` flag gives us the *explicit reason why Nmap concluded* that the system is up or a particular port is open. In this console output above, we can see that this system is considered online because Nmap “received arp-response.” 
 
 On the other hand, we know that the SSH port is deemed to be open because Nmap received a “syn-ack” packet back.
+
+#### [[Service Detection]]
+
