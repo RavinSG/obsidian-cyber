@@ -91,4 +91,3 @@ Providing the` --reason` flag gives us the *explicit reason why Nmap concluded* 
 On the other hand, we know that the SSH port is deemed to be open because Nmap received a “syn-ack” packet back.
 
 #### [[Service Detection]]
-
