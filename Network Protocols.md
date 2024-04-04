@@ -21,6 +21,7 @@ Communication protocols govern the *exchange of information* in network transmis
 - [[Secure shell]] (**SSH**)
 - [[Internet Message Access Protocol]] (**IMAP**)
 - [[Simple Mail Transfer Protocol]] (**SMTP**)
+- [[File Transfer Protocol]] (**FTP**)
 #### Management Protocols
 
 Management protocols are used for *monitoring and managing activity on a network*. They include protocols for error reporting and optimising performance on the network.
