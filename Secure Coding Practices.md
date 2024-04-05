@@ -23,3 +23,4 @@ Here are OWASP’s top proactive controls with brief descriptions:
   
 - **Handle all Errors and Exceptions** Errors should not provide sensitive data, and applications should be tested to ensure that they handle problems gracefully.
 
+
