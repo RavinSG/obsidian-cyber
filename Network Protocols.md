@@ -29,7 +29,7 @@ Management protocols are used for *monitoring and managing activity on a network
 - [[Simple Network Management Protocol]] (**SNMP**)
 - [[Internet Control Message Protocol]] (**ICMP**)
 - [[Dynamic Host Configuration Protocol]] (**DHCP**)
-- [[Post office protocol]] (**POP**)
+- [[Post office protocol]] (**POP3**)
 
 #### Security Protocols
 
