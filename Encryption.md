@@ -2,9 +2,9 @@ All digital information deserves to be kept *private, safe, and secure*. Encrypt
 
 There are two main types of encryption:
 
-- **Symmetric encryption** is the use of a *single secret key* to exchange information. Because it uses one key for encryption and decryption, the sender and receiver must know the secret key to lock or unlock the cipher.
+- **[[Symmetric Key Encryption|Symmetric encryption]]** is the use of a *single secret key* to exchange information. Because it uses one key for encryption and decryption, the sender and receiver must know the secret key to lock or unlock the cipher.
 
-- **Asymmetric encryption** is the use of a *public and private key pair* for encryption and decryption of data. It uses two separate keys: a public key and a private key. The public key is used to encrypt data, and the private key decrypts it. The private key is only given to users with authorised access.
+- **[[Asymmetric Key Encryption|Asymmetric encryption]]** is the use of a *public and private key pair* for encryption and decryption of data. It uses two separate keys: a public key and a private key. The public key is used to encrypt data, and the private key decrypts it. The private key is only given to users with authorised access.
 
 ### Obscurity is not security
 

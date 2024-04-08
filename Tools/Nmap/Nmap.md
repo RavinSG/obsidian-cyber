@@ -40,7 +40,7 @@ When no host discovery options are provided, Nmap follows the following approach
 - [[Host Discovery Using ICMP]]
 - [[Host Discovery Using TCP and UDP]]
 
-### [[Port Scanning]]
+### [[Tools/Nmap/Port Scanning]]
 
 ### [[Nmap Scripting Engine]]
 

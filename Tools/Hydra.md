@@ -1,5 +1,5 @@
 
-Hydra allows us to automated way to try the common passwords or the entries from a word list. It also supports many protocols, including **FTP**, **POP3**, **IMAP**, **SMTP**, SSH, and all methods related to **HTTP**. 
+Hydra allows us to automated way to try the common passwords or the entries from a word list. It also supports many protocols, including **FTP**, **POP3**, **IMAP**, **SMTP**, **SSH**, and all methods related to **HTTP**. 
 
 The general command-line syntax is: `hydra -l username -P wordlist.txt server service `where we specify the following options:
 
