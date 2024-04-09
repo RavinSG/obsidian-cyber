@@ -8,4 +8,4 @@ During the penetration test, the testers follow the same process used by attacke
 
 - *Attackers establish persistence* on compromised networks by installing backdoors and using other mechanisms that will allow them to regain access to the network, even if the initial vulnerability is patched.
 
-Penetration testers make use of many of the same tools used by real attackers as they perform their work. Exploitation frameworks, such as [[Metasploit]], simplify the use of vulnerabilities by providing a modular approach to configuring and deploying vulnerability exploits.
+Penetration testers make use of many of the same tools used by real attackers as they perform their work. Exploitation frameworks, such as [[Tools/Metasploit]], simplify the use of vulnerabilities by providing a modular approach to configuring and deploying vulnerability exploits.

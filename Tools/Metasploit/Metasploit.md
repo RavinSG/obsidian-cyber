@@ -21,3 +21,5 @@ We have to work with the following recurring concepts when dealing with Metasplo
 - **Payload**: An exploit will take advantage of a vulnerability. However, if we want the exploit to have the result we want (gaining access to the target system, read confidential information, etc.), we need to use a payload. Payloads are the code that will run on the target system.
 
 [[Msfvenom]]
+
+[[Meterpreter]]
