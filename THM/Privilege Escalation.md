@@ -218,4 +218,16 @@ The idea is quite simple; if there is a scheduled task that runs with root privi
 
 Cron job configurations are stored as `crontabs` (cron tables) to see the next time and date the task will run. Any user can read the file keeping system-wide cron jobs under `/etc/crontab`
 
+In the odd event we find an existing script or task attached to a cron job, it is always worth spending time to understand the function of the script and how any tool is used within the context. For example, tar, 7z, rsync, etc., can be *exploited* using their *wildcard* feature.
+
 ### PATH
+
+If a *folder* for which your user has *write permission* is located in the path, you could potentially hijack an application to run a script. **PATH** in Linux is an environmental variable that tells the operating system where to search for executables. For any command that is not built into the shell or that is not defined with an absolute path, Linux will start searching in folders defined under PATH. 
+
+If we type “`thm`” to the command line, these are the locations Linux will look in for an executable called `thm`. The scenario below will give you a better idea of how this can be leveraged to increase our privilege level. As you will see, this depends entirely on the *existing configuration* of the target system, so be sure you can answer the questions below before trying this.
+
+1. What folders are located under $PATH
+2. Does your current user have write privileges for any of these folders?
+3. Can you modify $PATH?
+4. Is there a script/application you can start that will be affected by this vulnerability?
+
