@@ -125,6 +125,7 @@ This command can also be used with (+) and (-) signs to specify a file that is l
 It would be wise to use the “find” command with “`-type f 2>/dev/nul`l” to redirect errors to “/dev/null” and have a cleaner output.
 
 - `find / -perm -u=s -type f 2>/dev/null`: Find files with the SUID bit, which allows us to run the file with a higher privilege level than the current user.
+- `find / -type f -perm -04000 -ls 2>/dev/null` will list files that have SUID or SGID bits set.
 
 Folders and files that can be written to or executed from:
 
