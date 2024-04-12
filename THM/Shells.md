@@ -7,7 +7,7 @@ At a high level, we are interested in two kinds of shell when it comes to exploi
 	- [SecLists](https://github.com/danielmiessler/SecLists)
   
 - **Bind shells** are when the code executed on the target is used to start a listener attached to a shell directly on the target. This would then be opened up to the internet, meaning you can connect to the port that the code has opened and obtain remote code execution that way. This has the advantage of not requiring any configuration on your own network, but may be prevented by firewalls protecting the target.
-
+  
 ### Interactivity
 
 Shells can be either interactive or non-interactive.

