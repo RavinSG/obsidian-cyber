@@ -1,5 +1,5 @@
 
-The second version of Wi-Fi Protected Access—known as **WPA2**—was released in 2004. WPA2 improves upon WPA by using the **Advanced Encryption Standard** (AES).
+The second version of Wi-Fi Protected Access—known as **WPA2**—was released in 2004. WPA2 improves upon WPA by using the **Advanced Encryption Standard** ([[Advanced Encryption Standard|AES]]).
 
 WPA2 also improves upon WPA’s use of TKIP. WPA2 uses the *Counter Mode Cipher Block Chain Message Authentication Code Protocol* (CCMP), which provides encapsulation and ensures message authentication and integrity. 
 

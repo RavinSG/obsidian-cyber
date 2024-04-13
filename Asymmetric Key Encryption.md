@@ -20,3 +20,10 @@ The following is a list of the major strengths of asymmetric key cryptography:
 - **Key exchange is a simple process**. Users who want to participate in the system simply make their public key available to anyone with whom they want to communicate. There is no method by which the private key can be derived from the public key.
   
 - **No preexisting communication link needs to exist**. Two individuals can begin communicating securely from the start of their communication session. Asymmetric cryptography does not require a preexisting relationship to provide a secure mechanism for data exchange.
+
+Asymmetric cryptography entails a higher degree of computational complexity than symmetric cryptography. *Keys used within asymmetric encryption systems must be longer* that those used in symmetric systems to produce cryptosystems of equivalent strengths.
+
+### Asymmetric Cryptosystems
+
+- [[RSA]]
+- [[Elliptic Curve]]
