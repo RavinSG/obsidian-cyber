@@ -33,5 +33,5 @@ In the CA trust model, the use of a series of intermediate CAs is known as **cer
 
 Certificate authorities do not need to be third-party service providers. Many organisations operate *internal CAs* that provide self-signed certificates for use inside an organization.
 
-- ### [[Certificate Generation and Destruction]]
-- 
+- [[Certificate Generation and Destruction]]
+- [[Certificate Formats]]
