@@ -191,3 +191,5 @@ msf6 exploit(multi/handler) > set lport 7777
 lport => 7777
 ```
 
+### Shell to Meterpreter
+

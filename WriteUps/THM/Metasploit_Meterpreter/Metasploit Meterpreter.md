@@ -256,6 +256,11 @@ erptest:1117:aad3b435b51404eeaad3b435b51404ee:8b9ca7572fe60a1559686dba90726715::
 ACME-TEST$:1008:aad3b435b51404eeaad3b435b51404ee:0160a066349f782d470cfb8a9514b95f:::
 ```
 
+After the hashes are dumped, we can use john to crack them. If the hashdump was from a windows NT machine, we need to add the `--format=NT` flag.
+
+```bash
+$ john --wordlist=/usr/share/wordlists/rockyou.txt --format=NT hash.txt
+```
 ### Flags
 
 We can then search for flags by using the search command.

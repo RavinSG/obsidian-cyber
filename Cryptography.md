@@ -32,3 +32,5 @@ Nonrepudiation *provides assurance* to the recipient that the *message was origi
 Nonrepudiation is offered only by public key, or asymmetric, cryptosystems.
 
 [[Cipher]]
+
+### [[Emerging Issues in Cryptography]]
