@@ -26,3 +26,19 @@ Internet-based systems and architectures often rely on a number of core technolo
 - [[OpenID]] is a open standard for decentralised authentication. OpenID identity providers can be leveraged for third-party sites using established identities. A common example of this is the "Log in with Google" functionality that many websites provide. Microsoft, Amazon, and many other organisations are OpenID identity providers (IdPs). Relying parties (RPs) redirect authentication requests to the IdP and then receive a response with an assertion that the user is who they claim to be due to successful authentication, and the user is logged in using the OpenID for that user.
   
 - [[OAuth]] is an open standard for authorisation used by any websites. OAuth provides a method for users to determine what information to provide to third part applications and sites without sharing credentials. This can be experienced with tools like Google Drive plug-ins that request access to your files and folders, or when you use a web conferencing tool that requests access to a Google calendar with a list of permissions it need or wants.
+
+These technologies are a major part of the foundation for many web-based SSO and federation implementations. Outside of web-based environments, single sign-on is commonly implemented using LDAP and Kerberos, such as in Windows domains and Linux infrastructure. 
+
+### Federation
+
+In many organisations, identity information is handled by an identity provider (IdP). Identity providers manage the life cycle of digital identities from creation through maintenance to eventual retirement of the identity in the systems and services it supports.
+
+Identity providers are often part of federated identity deployments, where they are *paired with relying parties*, which trust the identity provider to handle authentication and then rely on that authentication to grant access to services.
+
+Here are a number of terms commonly used in federated environments that you should be aware of:
+
+- The principal, typically a user 
+- Identity providers (**IdPs**), who provide identity and authentication services via an attestation process in which the IdP validates that the user is who they claim to be
+- Service providers (**SPs**), who provide services to users whose identities have been attested to by an identity provider 
+
+In addition, the term relying party (RP) is sometimes used, with a similar meaning to a service party. An RP will require authentication and identity claims from an IdP.
