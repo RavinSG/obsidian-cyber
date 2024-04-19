@@ -10,7 +10,7 @@ We will first run a namp scan on the machine to figure out the opened ports and 
 $ nmap -sC -sV -vv -oN nmap/initial 10.10.166.119
 ```
 
-From the nam result below, we can see that 7 ports are opened in the machine. We can also see that Samba is running on port **445**.
+From the nmap result below, we can see that 7 ports are opened in the machine. We can also see that Samba is running on port **445**.
 
 ```bash
 # Nmap 7.94SVN scan initiated Wed Apr 17 19:38:36 2024 as: nmap -sC -sV -vv -oN nmap/initial 10.10.166.119
