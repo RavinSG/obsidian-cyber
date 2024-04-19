@@ -4,3 +4,7 @@ Using a password remains the most common means of authentication, but passwords 
 Passwords are also susceptible to brute-force attacks, allowing a determined attacker who can spend enough time freely using them to eventually break into a system. This has led to the use of multiple factors, preventing a lost or stolen password from allowing easy account compromise.
 
 - [[Passwords]]
+- [[Multi-factor Authentication]]
+- [[One-Time Passwords]]
+- [[Biometrics]]
+

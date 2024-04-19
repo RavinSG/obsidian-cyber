@@ -22,6 +22,6 @@ In other words, *least privilege limits the access that an individual receives*,
 
 ### [[User Provisioning]]
 
-### [[Granting Authorisation]]
+### [[Access Control Schemes]]
 
 

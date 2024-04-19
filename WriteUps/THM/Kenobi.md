@@ -67,7 +67,7 @@ Service Info: Host: KENOBI; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 ### Enumerating Samba 
 
-We can now use namp scripts to enumerate for samba shares and users.
+We can use namp scripts to enumerate for samba shares and users.
 
 ```bash
 $ nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.166.119
@@ -109,7 +109,7 @@ Host script results:
 Nmap done: 1 IP address (1 host up) scanned in 45.78 seconds
 ```
 
-Based on the output of the above command, we can see that there are 3 Samba shares available; *IPC*, *anonymous*, and *print*.
+Based on the output of the above command, we see that there are 3 Samba shares available; *IPC*, *anonymous*, and *print*.
 
 We can connect to the anonymous share using `smbclient` and list down available files.
 
@@ -189,7 +189,7 @@ There seems to be a `mod_copy` module related exploit where any unauthenticated 
 
 ### rpcbind
 
-However, we should now find a way to access a directory on the server based on the set of available ports. From the nmap scan, under port 111 we noticed that rcpbind is running with access to `nfs`. We can use nmap scripts to enumerate this and find if there are any mounts.
+However, we should now find a way to access a directory on the server based on the set of available ports before copying information using the ProFTPD vulnerability. From the nmap scan, under port 111 we noticed that rcpbind is running with access to `nfs`. We can use nmap scripts to enumerate this and find if there are any mounts.
 
 ```bash
 $ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.166.119 -oN nmap/rpcbind
@@ -310,7 +310,7 @@ kenobi@kenobi:~$ find / -perm -04000 2>/dev/null
 /bin/ping6
 ```
 
-There is a binary named `/usr/bin/menu`, which is out of the ordinary binaries we normally see in a Linux machine. We can try running it and see what happens.
+There is a binary named `/usr/bin/menu`, which is not one of the ordinary binaries we normally see in a Linux machine. We can try running it and see what happens.
 
 ```bash
 kenobi@kenobi:~$ /usr/bin/menu
