@@ -9,12 +9,4 @@ Similar to an incident response plan, a *business continuity plan* (BCP) is a do
 
 When an outage occurs due to a security incident, organisations must have some sort of a functional recovery plan set to resolve the issue and get systems fully operational. BCPs can include strategies for recovery that focus on returning to normal operations. Site resilience is one example of a recovery strategy. 
 
-### Site resilience 
-
-**Resilience** is the ability to prepare for, respond to, and recover from disruptions. Organisations can design their systems to be resilient so that they can continue delivering services despite facing disruptions. An example is site resilience, which is used to ensure the availability of networks, data centres, or other infrastructure when a disruption happens. There are three types of recovery sites used for site resilience:
-
-- *Hot sites*: A fully operational facility that is a duplicate of an organisation's primary environment. Hot sites can be activated immediately when an organisation's primary site experiences failure or disruption.
-
-- *Warm sites*: A facility that contains a fully updated and configured version of the hot site. Unlike hot sites, warm sites are not fully operational and available for immediate use but can quickly be made operational when a failure or disruption occurs.
-
-- *Cold sites*: A backup facility equipped with some of the necessary infrastructure required to operate an organisation's site. When a disruption or failure occurs, cold sites might not be ready for immediate use and might need additional work to be operational.
+### [[Site Resilience]]

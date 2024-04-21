@@ -21,4 +21,34 @@ Backups are a copy of the live storage system:
 
 Since most failures are not a complete storage failure and the cost of space for multiple full backups is much higher, most organisations choose to *implement incremental backups, typically with a full backup on a periodic basis*.
 
+The ability to recover form backups as well as the organisation's need for that recovery process drive both design decisions and organisational processes. Organisations will create recovery point objectives ([[Recovery Point Objectives|RPOs]]) and recovery time objectives ([[Recovery Time Objectives|RTOs]]) that determine how significant much data loss, if any, is acceptable and how long recovery can take without causing significant damage to the organisation.
 ### Replication
+
+Replication focuses on using either *synchronous or asynchronous methods to copy live data to another location* or device. Unlike backups that occur periodically, replication is always occurring as changes are made.
+
+Replication helps with multisite, multi-system designs, ensuring that changes are carried over to all systems or clusters that are part of an architecture. Replication can help with disaster recovery, availability, and load balancing.
+
+### Journaling
+
+Another data protection option is journaling, which *creates a log of changes that can be reapplied* if an issue occurs. Journaling is commonly used for **databases** and similar technologies that combine frequent changes with an ability to restore to a point in time.
+
+Journaling also has a role to play in virtual environments where journal-based solutions allow *virtual machines* to be restored to a point in time rather than to a fixed snapshot.
+
+### Snapshots
+
+A snapshot captures the full state of a system or device at the time the backup is completed. Snapshots are common for virtual machines, where they allow the machine state to be restored at the point in time that the snapshot was taken.
+
+Snapshots can be useful to *clone systems*, to go *back in time* to a point before a patch or upgrade was installed, or to restore a system state to a point before some event occurred. Since they are taken live, they can be captured while the system is running, often without significant impact to performance.
+
+Like a full backup, snapshot can consume quite a bit of space, but most virtualisation systems that perform enterprise snapshots are equipped with *compression and deduplication technology* that helps to *optimise space usage* for snapshots.
+
+### Images
+
+Images are a similar concept to snapshots but most often they refer to a complete copy of a system or server, typically down to the bit level for the drive. Images are a backup method of choice for *servers where complex configurations* may be in use, and where cloning or restoration in a short time frame may be desired. 
+
+### VDI
+
+Virtualisation systems and virtual desktop infrastructure (VDI) also use images to *create non-persistent systems*, which are run using a “gold master” image. The gold master image is not modified when the non-persistent system is shut down, thus ensuring that the next user has the same expected experience.
+
+
+### [[Backup Media]]
