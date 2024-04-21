@@ -17,3 +17,6 @@ Another response control is the ability to **return to a last-known good configu
 ### [[Scalability]]
 
 ### [[Site Resilience]]
+
+### [[Capacity Planning]]
+
