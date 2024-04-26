@@ -40,3 +40,5 @@ The rapid provisioning and releasing of cloud services also takes place with min
 ### [[Shared Responsibility Model]]
 
 ### [[Cloud Standards and Guidelines]]
+
+### [[Cloud Security]]
