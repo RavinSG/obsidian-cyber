@@ -39,3 +39,8 @@ Technology governance efforts guide the work of IT organisations and *ensure tha
 - Managing vendor relationships and monitoring for early warning signs of vendor stability issues
 - Overseeing an organisation's portfolio of cloud activities
 
+Auditability is an important component of cloud governance. Cloud computing contracts should include language guaranteeing the right of the customer to audit cloud service providers. They may choose to perform these audits themselves or engage a third party to perform an independent audit. 
+
+The use of auditing is essential to *providing customers with the assurance* that the *provider is operating in a secure manner* and *meeting its contractual data protection obligations*.
+
+### [[Hardening Cloud Infrastructure]]
