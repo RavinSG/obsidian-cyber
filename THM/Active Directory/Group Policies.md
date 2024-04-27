@@ -1,3 +1,7 @@
+---
+aliases:
+  - GPOs
+---
 
 We have organised users and computers in OUs just for the sake of it, but the main idea behind this is to be able to deploy *different policies for each OU individually*. That way, we can push different configurations and security baselines to users depending on their department.
 

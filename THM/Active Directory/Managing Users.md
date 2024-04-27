@@ -13,7 +13,7 @@ By default, OUs are protected against accidental deletion. To delete the OU, we 
 
 This will show you some additional containers and enable you to disable the accidental deletion protection. To do so, right-click the OU and go to Properties. You will find a checkbox in the Object tab to *disable the protection*.
 
-![[Screenshot 2024-04-23 at 12.23.46 PM.png|500]]
+![[Deletion protection.png|500]]
 
 
 Be sure to uncheck the box and try deleting the OU again. You will be prompted to confirm that you want to delete the OU, and as a result, any users, groups or OUs under it will also be deleted.
