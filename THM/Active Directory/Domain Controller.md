@@ -1,2 +1,6 @@
+---
+aliases:
+  - DC
+---
 
 A domain controller is a server that *manages security authentication requests in a Windows Server network*. It stores user account information and controls access to resources on the network. It is a critical component for managing and securing a network infrastructure.

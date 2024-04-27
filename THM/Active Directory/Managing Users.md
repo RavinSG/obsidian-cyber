@@ -5,7 +5,7 @@ You have been given the following organisational chart and are expected to make 
 
 ### Deleting extra OUs and users
 
-If we try to delete an OU, we get the following error, 
+If we try to delete an [[Organization Unit|OU]], we get the following error, 
 
 ![[Deleting OUs.png]]
 
