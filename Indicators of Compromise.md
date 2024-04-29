@@ -1,6 +1,7 @@
 ---
 aliases:
   - IoC
+  - IoCs
 ---
 Security analysts monitor networks to identify any signs of potential security incidents known as indicators of compromise (**IoC**) and protect networks from threats or attacks. 
 
