@@ -23,4 +23,3 @@ Changing default passwords is a common hardening practice and should be a defaul
 Another key practice in hardening efforts for many systems and devices is removing unnecessary software. While disabling services, ports, and protocols can be helpful, removing software that isn't needed removes the *potential for a disabled tool to be reenabled*. It also reduces the amount of patching and monitoring that will be required for the system.
 
 Organisations often build their own system images and reinstall a fresh operating system image without unwanted software installed to simplify the process while also allowing them to deploy the software that they do want and need for business purposes.
-
