@@ -18,7 +18,6 @@ Host-based DLP can *also monitor system configuration and user actions*, blockin
 
 DLP systems may simply block traffic that violates the organisation's policy, or in some cases, they may automatically apply encryption to the content. This automatic encryption is commonly used with DLP systems that focus on email.
 
-
 DLP systems also have two mechanisms of action:
 
 - **Pattern matching**, where they watch for the telltale signs of sensitive information. For example, if they see a number that is formatted like a credit card or Social Security number, they can automatically trigger on that. Similarly, they may contain a database of sensitive terms, such as “Top Secret” or “Business Confidential,” and trigger when they see those terms in a transmission.
