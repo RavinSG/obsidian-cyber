@@ -8,3 +8,5 @@ With defence in depth in mind, it helps to understand that networks are also bui
 ### Infrastructure Considerations
 
 The organisation's *attack surface*, or a device's attack surface, consists of the points at which an unauthorised user could gain access. This includes services, management interfaces, and any other means that attackers could obtain access to or disrupt the organization. Understanding an organisation's attack surface is a key part of security and infrastructure design.
+
+### [[Network Design Concepts]]

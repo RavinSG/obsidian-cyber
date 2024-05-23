@@ -9,7 +9,7 @@ Controls offered by **cloud service providers** have the advantage of *direct in
 
 Most organisations use a variety of cloud service providers for different purposes. This is especially true when organisations use *highly specialised SaaS products*. Managing security policies consistently across these services poses a major challenge for cybersecurity analysts.
 
-Cloud access security brokers (**CASBs**) are software tools that serve as i*ntermediaries between cloud service users and cloud service providers*. This positioning allows them to monitor user activity and enforce policy requirements. CASBs operate using two different approaches:
+Cloud access security brokers (**CASBs**) are software tools that serve as *intermediaries between cloud service users and cloud service providers*. This positioning allows them to monitor user activity and enforce policy requirements. CASBs operate using two different approaches:
 
 - **Inline CASB solutions** physically or logically *reside in the connection path between the user and the service*. They may do this through a hardware appliance or an endpoint agent that routes requests through the CASB. This approach requires configuration of the network and/or endpoint devices. It provides the advantage of seeing requests before they are sent to the cloud service, allowing the CASB to *block requests* that violate policy.
   
