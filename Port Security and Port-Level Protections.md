@@ -1,0 +1,21 @@
+
+Protecting networks from devices that are connected to them requires more than just validating their security state using [[Network Access Control|NAC]]. A number of protections focus on ensuring that the *network itself is not endangered by traffic that is sent on it*.
+
+**Port security** is a capability that allows you to limit the number of *MAC* addresses that can be used on a single port. This **prevents** a number of possible problems, including *MAC (hardware) address spoofing, content-addressable memory (CAM) table overflows*, and in some cases, *plugging in additional network devices* to extend the network. 
+
+Although port security implementations vary, most port security capabilities allow you to either dynamically lock the port by setting a maximum number of MAC addresses or statically lock the port to allow only specific MAC addresses. Although this type of MAC filtering is less nuanced and provides less information than NAC does, it remains useful.
+
+> [!note] CAM Table Overflow
+> Port security helps protect the CAM table, which maps MAC addresses to IP addresses, allowing a switch to send traffic to the correct port. If the CAM table doesn't have an entry, the switch will attempt to determine what port the address is on, broadcasting traffic to all ports if necessary. That means attackers who can fill a CAM table can make switches fail over to broadcasting traffic, making otherwise inaccessible traffic visible on their local port.
+
+Since spoofing MAC addresses is relatively easy, port security shouldn't be relied on to prevent untrusted systems from connecting. Despite this, configuring port security can help prevent attackers rom easily connecting to a networks if NAC is not available or not in use. It can also prevent CAM table overflow attacks that might otherwise be possible.
+
+In addition to port security, **protocol-level protections** are an important security capability that switches and other network devices provide. These include the following:
+
+- **Loop prevention** focuses on detecting loops and then disabling ports to prevent the loops from causing issues. *Spanning Tree Protocol* (STP) using bridge protocol data units, as well as anti-loop implementations like Cisco's loopback detection capability, send frames with a switch identifier that the switch then monitors to prevent loops. Although a loop can be as simple as a cable with both ends plugged into the same switch, loops can also result from cables plugged into different switches, firewalls that are plugged in backward, devices with several network cards plugged into different portions of the same network, and other misconfigurations found in a network.
+  
+- **Broadcast storm prevention**, sometimes called storm control, *prevents broadcast packets from being amplified as they traverse a network*. Preventing broadcast storms relies on several features such as offering loop protection on ports that will be connected to user devices, enabling STP on switches to make sure that loops are detected and disabled, and rate-limiting broadcast traffic.
+  
+- **Bridge Protocol Data Unit** (BPDU) guard protects STP by *preventing ports that should not send BPDU messages from sending them*. It is typically applied to switch ports where user devices and servers will be plugged in. Ports where switches will be connected will not have BPDU turned on, because they may need to send BPDU messages that provide information about ports, addresses, priorities, and costs as part of the underlying management and control of the network.
+  
+- **Dynamic Host Configuration Protocol (DHCP) snooping** focuses on preventing rogue DHCP servers from handing out IP addresses to clients in a managed network. DHCP snooping *drops messages from any DHCP server that is not on a list of trusted servers*, but it can also be configured with additional options such as the ability to block DHCP messages where the source MAC and the hardware MAC of a network card do not match. A final security option is to drop messages releasing or declining a DHCP offer if the release or decline does not come from the same port that the request came from, preventing attackers from causing a DHCP offer or renewal to fail.
