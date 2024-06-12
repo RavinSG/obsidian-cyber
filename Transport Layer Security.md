@@ -32,4 +32,4 @@ After establishing a TCP connection with the server, the client establishes an S
 
 Consequently, once an SSL/TLS handshake has been established, HTTP requests and exchanged data won’t be accessible to anyone watching the communication channel.
 
-
+TLS uses ephemeral keys. Hence, even if a key is compromised, any past or future communications will not be exposed.

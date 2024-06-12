@@ -95,3 +95,7 @@ Unified threat management (**UTM**) devices frequently include firewalls, IDS/IP
 UTM appliances are frequently deployed at network boundaries, particularly for an entire organization or division. Since they have a wide range of security functionality, *they can replace several security devices* while providing a single interface to manage and monitor them. They also typically provide a management capability that can handle multiple UTM devices at once, allowing organisations with several sites or divisions to deploy UTM appliances to protect each area while still managing and monitoring them centrally.
 
 Finally, web application firewalls (**WAFs**) are security devices that are designed to *intercept, analyse, and apply rules to web traffic*, including tools such as database queries, APIs, and other web application tools. In many ways, a WAF is easier to understand if you think of it as a firewall combined with an intrusion prevention system. They provide deeper inspection of the traffic sent to web servers looking for attacks and attack patterns, and then apply rules based on what they see. This allows them to block attacks in real time, or even modify traffic sent to web servers to remote potentially dangerous elements in a query or request.
+
+### Screened Subnet
+
+A screened subnet uses three interfaces on a firewall. One interface is used to connect to the Internet or an untrusted network, one is used to create a secure area, and one is used to create a public area, sometimes called a **DMZ**.
