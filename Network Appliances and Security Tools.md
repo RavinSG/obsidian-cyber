@@ -99,3 +99,7 @@ Finally, web application firewalls (**WAFs**) are security devices that are desi
 ### Screened Subnet
 
 A screened subnet uses three interfaces on a firewall. One interface is used to connect to the Internet or an untrusted network, one is used to create a secure area, and one is used to create a public area, sometimes called a **DMZ**.
+
+[[Secure Protocols]]
+
+[[Deception and Disruption Technology]]

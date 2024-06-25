@@ -29,3 +29,5 @@ There are three major methods of protecting email. These include **Domain Keys I
 **DMARC**, or Domain-based Message Authentication Reporting and Conformance, is a protocol that *uses SPF and DKIM to determine whether an email message is authentic*. Like SP and DKIM, DMARC records are published in DNS, but unlike DKIM and SPF, DMARC can be used to *determine whether you should accept a message from a sender*. Using DMARC, you can choose to reject or quarantine messages that are not sent by a DMARC-supporting sender. You can read an overview of DMARC at http://dmarc.org/overview.
 
 In addition to email security frameworks like DKIM, SPF, and DMARC, *email security devices are used* by many organizations. These devices, often called **email security gateways**, are designed to filter both inbound and outbound email while providing a variety of security services. They typically include functions like phishing protection, email encryption, attachment sandboxing to counter malware, ransomware protection functions, URL analysis and threat feed integration, and of course support for DKIM, SPF, and DMARC checking.
+
+[[Network Attacks]]
