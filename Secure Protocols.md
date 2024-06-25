@@ -48,3 +48,19 @@ Secure protocols have places in many parts of your network and infrastructure. S
 - Secure Real-Time Protocol (SRTP) is a secure version of the Real-time Protocol, a protocol designed to provide audio and video streams via networks. SRTP uses encryption and authentication to attempt to reduce the likelihood of successful attacks, including replay and denial-of-service attempts. RTP uses paired protocols, RTP and RTCP. RTCP is the control protocol that monitors the quality of service (QoS) and synchronisation of streams, and RTCP has a secure equivalent, SRTP, as well.
   
 - Secure Lightweight Directory Application Protocol (LDAPS) is a TLS-protected version of LDAP that offers confidentiality and integrity protections.
+
+### Email-Related Protocols
+
+Although many organisations have moved to web-based email, email protocols like Post Office Protocol (**POP**) and Internet Message Access Protocol (**IMAP**) remain in use for mail clients. Secure protocol options that *implement TLS as a protective layer exist for both*, resulting in the deployment of **POPS** and **IMAPS**.
+
+**Secure/Multipurpose Internet Mail Extensions** (S/MIME) provides the ability to encrypt and sign MIME data, the format used for email attachments. Thus, the content and attachments for an email can be protected, while providing authentication, integrity, nonrepudiation, and confidentiality for messages sent using S/MIME.
+
+Unlike many of the other protocols discussed here, *S/MIME requires a certificate* for users to be able to send and receive S/MIME-protected messages. A locally generated certificate or one from a public certificate authority (CA) is needed. *This requirement adds complexity for S/MIME* users who want to communicate securely with other individuals, because certificate management and validation can become complex. *For this reason, S/MIME is used less frequently*, despite broad support by many email providers and tools.
+
+### IPSec
+
+IPSec (Internet Protocol Security) is more than just a single protocol. In fact, IPSec is an entire suite of security protocols used to *encrypt and authenticate IP traffic*.
+
+- **Authentication Header** (AH) uses hashing and a shared secret key to ensure integrity of data and validates senders by authenticating the IP packets that are sent. AH can ensure that the IP payload and headers are protected.
+  
+- **Encapsulating Security Payload** (ESP) operates in either transport mode or tunnel mode. In tunnel mode, it provides integrity and authentication for the entire packet; in transport mode, it only protects the payload of the packet. If ESP is used with an authentication header, this can cause issues for networks that need to change IP or port information.
