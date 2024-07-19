@@ -1,0 +1,6 @@
+
+Cellular networks provide connectivity for mobile devices like cell phones *by dividing geographic areas into “cells”* with tower coverage allowing wireless communications between devices and towers or cell sites. Modern cellular networks use technologies like LTE (long-term evolution) 4G and related technology and new 5G networks, which have been deployed widely in many countries. 
+
+**5G requires much greater antenna density** but also provides greater bandwidth and throughput. Whereas cellular providers and organisations that wanted cellular connectivity tended to place towers where coverage was needed for 4G networks, 5G networks require much more attention to antenna deployment, which means that organisations need to design around 5G antenna placement as part of their building and facility design efforts over time.
+
+Cellular connectivity is normally provided by a cellular carrier rather than an organization, unlike Wi-Fi or other technologies that companies may choose to implement for themselves. That means that the cellular network is secure, managed, and controlled outside of your organization, and that traffic sent via a cellular connection goes through a third-party network. *Cellular data therefore needs to be treated as you would an external network* connection rather than your own corporate network.

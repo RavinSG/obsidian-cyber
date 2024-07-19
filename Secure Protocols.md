@@ -20,6 +20,7 @@ Secure protocols have places in many parts of your network and infrastructure. S
 - *Routing and switching protocol* security can be complex, with protocols like Border Gateway Protocol (BGP) lacking built-in security features. Therefore, attacks such as BP hijacking attacks and other routing attacks remain possible. Organisations cannot rely on a secure protocol in many cases and need to design around this lack.
   
 - Network address allocation using DHCP does not offer a secure protocol, and network protection against DHCP attacks relies on detection and response rather than a secure protocol.
+  
 - Subscription services such as cloud tools and similar services frequently leverage HTTPS but may also provide other secure protocols for their specific use cases. The wide variety of possible subscriptions and types of services means that these services must be assessed individually with an architecture and design review, as well as data flow reviews all being part of best practices to secure subscription service traffic if options are available.
 
 ### Secure Protocols
