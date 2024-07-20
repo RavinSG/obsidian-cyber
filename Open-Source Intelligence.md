@@ -32,3 +32,5 @@ There are a number of reasons that proprietary threat intelligence may be used. 
 > [!tip] Tip
 > You may want to have multiple feeds that you can check against each other—often one feed may be faster or release information sooner, so multiple good-quality, reliable feeds can be a big help!.
 
+
+[[Active Reconnaissance]]

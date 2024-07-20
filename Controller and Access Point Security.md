@@ -1,0 +1,6 @@
+
+Enterprise networks rely on wireless local area network (WLAN) controllers to help manage access points and the organisation's wireless network. They *offer additional intelligence and monitoring*; allow for *software-defined wireless networks*; and can provide additional services, such as *blended Wi-Fi and 5G wireless roaming*. Wireless controllers can be deployed as hardware devices, as a cloud service, or as a virtual machine or software package.
+
+Not all organisations will deploy a wireless controller. Small and even mid-sized organisations may choose to deploy stand-alone access points to provide wireless network access.
+
+Advanced WLAN controllers and access points may also have advanced security features, such as *threat intelligence*, *intrusion prevention*, or other capabilities integrated into them. Depending on your network architecture and security design, you may want to leverage these capabilities, or you may choose to disable them because your network infrastructure implements those capabilities in another location or with another tool, or they do not match the needs of the network where you have them deployed.

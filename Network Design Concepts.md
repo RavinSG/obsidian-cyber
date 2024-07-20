@@ -4,7 +4,7 @@ Physical isolation is the idea of separating devices so that there is no connect
 
 ### Logical Segmentation
 
-Logical segmentation is done *using software or settings rather than a physical separation* using difference deices. Virtual local area networks (VLANs) are a common method of providing logical segmentation. VLAN tags are applied to packets that are part of a VLAN, and systems on that virtual network segment see them like they would in a physical network segment. Attacks against logical segmentation attempt to bypass the software controls that separate traffic to allow traffic to be sent or received from other regions.
+Logical segmentation is done *using software or settings rather than a physical separation* using difference deices. Virtual local area networks (VLANs) are a common method of providing logical segmentation. [[Virtual Local Area Network|VLAN]] tags are applied to packets that are part of a VLAN, and systems on that virtual network segment see them like they would in a physical network segment. Attacks against logical segmentation attempt to bypass the software controls that separate traffic to allow traffic to be sent or received from other regions.
 
 ### High Availability
 

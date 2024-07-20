@@ -60,7 +60,7 @@ Instead, cloud service providers meet the need for firewalls through the use of 
 
 #### Virtual Private Cloud (VPC)
 
-On a physical network, networking and security professionals use virtual LAN (VLAN) technology to achieve segmentation. In cloud environments, virtual private clouds (VPCs) serve the same purpose.
+On a physical network, networking and security professionals use virtual LAN ([[Virtual Local Area Network|VLAN]]) technology to achieve segmentation. In cloud environments, virtual private clouds (VPCs) serve the same purpose.
 
 Using VPCs, teams can group systems into subnets and designate those subnets as public or private, depending on whether access to them is permitted from the Internet.
 
