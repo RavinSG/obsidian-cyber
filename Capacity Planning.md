@@ -17,4 +17,4 @@ Once you've implemented resilience and recovery controls, it is important to tes
   
 - **Parallel processing exercise** move processing to a hot site or alternate/backup system or facility to validate that the back up can perform as expected. This has the potential for disruption if the processing is not properly separated and the parallel system or site attempts to take over for the primary's data processing.
   
-- **Failover exercise**s test full failover to an alternate site or system, and they have the greatest potential for disruption but also provide the greatest chance to fully test in a real-world scenario.
+- **Failover exercises** test full failover to an alternate site or system, and they have the greatest potential for disruption but also provide the greatest chance to fully test in a real-world scenario.
