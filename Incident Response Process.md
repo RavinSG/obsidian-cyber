@@ -22,3 +22,5 @@ In addition to these six steps, organisations typically conduct a **lessons lear
 Although this list may make it appear as if incidents always proceed in a linear fashion from item to item, *many incidents will move back and forth between stages* **as additional discoveries are made or as additional actions are taken by malicious actors**. So, you need to remain nimble and understand that you may not be in the phase you think you are, or that you need to operate in multiple phases at once as you deal with components of an incident—or multiple incidents at once!
 
 - [[Preparing for Incident Response]]
+- [[Policies]]
+- [[Training]]

@@ -1,0 +1,2 @@
+
+Appropriate and regular training is required for incident responders to be ready to handle incidents of all types. Organisations often invest in training for their staff including incident response certifications. In addition, organisations like the Cybersecurity & Infrastructure Security Agency (CISA) offer training for incident response covering a broad range of topics like preventing attacks, understanding indicators of compromise, and managing logs

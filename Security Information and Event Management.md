@@ -75,3 +75,7 @@ Collected event data should go through the process of normalisation. Normalisati
 #### Analyse data
 
 After log data has been collected, aggregated, and normalised, the SIEM must do something useful with all of the data to enable security teams to investigate threats. During this final step in the process, SIEM tools analyse the data. *Analysis can be done with some type of detection logic such as a set of rules and conditions*. SIEM tools then apply these rules to the data, and if any of the log activity matches a rule, alerts are sent out to cybersecurity teams.
+
+### SIEM Dashboards
+
+#### Sensitivity and Thresholds
