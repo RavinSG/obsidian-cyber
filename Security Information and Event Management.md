@@ -79,3 +79,8 @@ After log data has been collected, aggregated, and normalised, the SIEM must do 
 ### SIEM Dashboards
 
 #### Sensitivity and Thresholds
+
+Analysts need to understand how to control and limit the alerts that a SIEM can generate. To do that, they set *thresholds, filter rules, and use other methods* of managing the sensitivity of the SIEM. Alerts may be set to activate only when an event *has happened a certain number of times*, or when it *impacts specific high-value systems*. Or, an alert may be set to *activate once instead of hundreds or thousands of times*.
+
+#### Trends
+
