@@ -2,7 +2,7 @@
 aliases:
   - SIEM
 ---
-A **SIEM tool** is an application that collects and analyses [[Security Logs|log data]] to monitor critical activities in an organization. 
+A **SIEM tool** is an application that collects and analyses [[Security Logs|log data]] to monitor critical activities in an organisation. 
 
 **A log** is a record of events that occur within an organisation’s systems. Depending on the amount of data you’re working with, it could take hours or days to filter through log data on your own. 
 
@@ -10,7 +10,7 @@ SIEM tools reduce the amount of data an analyst must review by providing alerts 
 
 SIEM tools provide a series of *dashboards* that visually organise data into categories, allowing users to select the data they wish to analyse. Different SIEM tools have different dashboard types that display the information you have access to.
 
-SIEM tools also come with different hosting options, including *on-premise and cloud*. Organisations may choose one hosting option over another based on a security team member’s expertise. For example, because a cloud-hosted version tends to be easier to set up, use, and maintain than an on-premise version, a less experienced security team may choose this option for their organization.
+SIEM tools also come with different hosting options, including *on-premise and cloud*. Organisations may choose one hosting option over another based on a security team member’s expertise. For example, because a cloud-hosted version tends to be easier to set up, use, and maintain than an on-premise version, a less experienced security team may choose this option for their organisation.
 
 ### The future of SIEM tools
 
@@ -84,3 +84,40 @@ Analysts need to understand how to control and limit the alerts that a SIEM can 
 
 #### Trends
 
+A trend *can point to a new problem that is starting to crop up*, an exploit that is occurring and taking over, or simply which malware is most prevalent in your organisation. Below is an example of categorising malware activity, identifying which signatures have been detected most frequently, which malware family is most prevalent, and where it sends traffic to. This can help organisations identify new threats as they rise to the top.
+
+![[SIEM Dashboard Trend.png]]
+
+#### Alerts and Alarms
+
+Alarms are *categorised by their time and severity*, and then provide detailed information that can be drilled down into. Events like **malware beaconing** and **infection** are *automatically categorised, prioritised, marked by source and destination*, and matched to an investigation by an analyst as appropriate. They also show things like which sensor is reporting the issue.
+
+An important activity for security professionals is **alert tuning**, the process of *modifying alerts to only alarm on important events*. Alerts that are not properly tuned can cause additional work, often alerting responders over and over until they begin to be ignored. 
+
+Properly tuning alerts is a key part of using alerts and alarms so that responders know that the events they will be notified about are worth responding to.
+Alert tuning often *involves setting thresholds, removing noise* by identifying false alarms and normal behaviours, and ensuring that tuning is *not overly broad* so that it ignores actual issues and malicious activity.
+
+>[!note] Alert Fatigue
+>One of the biggest threats to SIEM deployments is **alert fatigue**. Alert fatigue occurs when alerts are sent *so often, for so many events*, that *analysts stop responding* to them. In most cases, these alerts aren't critical, high urgency, or high impact and are in essence just creating noise. Or, there may be a *very high proportion of false positives*, causing the analyst to spend hours chasing ghosts. 
+>
+>In either case, alert fatigue means that when *an actual event occurs it may be missed* or simply disregarded, resulting in a much worse security incident than if analysts had been ready and willing to handle it sooner. That's why alert tuning is so important.
+
+#### Log Aggregation, Correlation, and Analysis
+
+*Individual data points* can be **useful when investigating an incident**, but *matching data points* to other data points is a **key part of most investigations**. Correlation requires having data such as the time that an event occurred, what system or systems it occurred on, what user accounts were involved, and other details that can help with the analysis process. 
+
+A SIEM can allow you to *search and filter data* based on multiple data points like these to narrow down the information related to an incident. *Automated correlation and analysis* is designed to match known events and indicators of compromise to build a complete dataset for an incident or event that can then be reviewed and analysed. As you can see in the figure below, from the AlienVault SIEM, you can add tags and investigations to data. Although each SIEM tool may refer to these by slightly different terms, the basic concepts and capabilities remain the same.
+
+![[AlienVault SIEM.png]]
+
+Log aggregation *isn't only done with SIEM devices* or services, however. Centralised logging tools like **syslog-ng**, **rsyslog**, and similar tools provide the ability to centralise logs and perform analysis of the log data. As with many security tools, many solutions exist to gather and analyse logs, with the lines blurring between various solutions like SIEM, [[Security Orchestration, Automation, and Response|SOAR]] (Security Orchestration, Automation, and Response systems), and other security response and analysis tools.
+
+#### Rules
+
+The **heart of alarms, alerts, and correlation engines** for a SIEM is the set of rules that drive those components. Below an example of how an alarm rule can be built using information the SIEM gathers. Rule conditions can use logic to determine if and when a rule will be activated, and then actions can trigger based on the rule. Results may be as simple as an alert or as complex as a programmatic action that changes infrastructure, enables or disables firewall rules, or triggers other defences.
+
+![[SIEM Rule Creation.png]]
+
+*Rules are important but can also cause issues*. Poorly constructed rule logic may miss events or cause false positives or overly broad detections. If the rule has an active response component, a *mis-triggered rule can cause an outage* or other infrastructure issue. Thus, rules need to be carefully built, tested, and reviewed on a regular basis. Although SIEM vendors often provide default rules and detection capabilities, the custom-built rules that organisations design for their environments and systems are key to a successful SIEM deployment.
+
+Finally, *SIEM devices also follow the entire life cycle for data*. That means most have the ability to set retention and data lifespan for each type of data and have support for compliance requirements. In fact, most SIEM devices have prebuilt rules or modules designed to meet specific compliance requirements based on the standards they require.
