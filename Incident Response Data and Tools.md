@@ -10,3 +10,5 @@ There are mainly three types of monitoring **systems**, **applications**, and **
 **Infrastructure** devices can also generate logs. *SNMP and syslog are both commonly used for infrastructure devices*. In addition, hardware vendors often sell management tools and systems that are used to monitor and control infrastructure systems and devices.
 
 This complex set of devices that each generate their own logs and have different log levels and events that may be important *drives the importance of devices like security information and event management* ([[Security Information and Event Management|SIEM]]) devices, which have profiles for each type of device or service and which can correlate and alert on activity based on rules and heuristic analysis.
+
+### [[Logging Protocols and Tools]]

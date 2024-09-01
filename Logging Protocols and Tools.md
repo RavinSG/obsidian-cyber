@@ -1,0 +1,13 @@
+
+Traditional Linux logs are sent via **syslog**, with clients sending messages to servers that collect and store the logs. Over time, other syslog replacements have been created to improve upon the basic functionality and capabilities of syslog. *When speed is necessary*, the rocket-fast system for log processing, or **rsyslog**, is an option. It supports *extremely high message rates*, *secure logging via TLS*, and *TCP-based messages* as well as *multiple backend database options*.
+
+Another alternative is **syslog-ng**, which provides enhanced filtering, direct logging to databases, and support for sending logs via TCP protected by TLS. The enhanced features of syslog replacements like rsyslog and syslog-ng mean that many organisations replace their syslog infrastructure with one of these options. 
+
+A final option for log collection is **NXLog**, an *open source* and commercially supported syslog centralisation and aggregation tool that can parse and generate log files in many common formats while also sending logs to analysis tools and SIEM solutions.
+
+>[!info] Digging Into systemd's Journal in Linux
+>
+>Most Linux distributions rely on **systemd** to *manage services and processes* and, in general, manage the system itself. Accessing the systemd journal that records what systemd is doing using the journald daemon can be accomplished using journalctl. This tool allows you to review kernel, services, and initrd messages as well as many others that systemd generates. Simply issuing the journalctl command will display all the journal entries, but additional modes can be useful. If you need to see what happened since the last boot, the -b flag will show only those entries. Filtering by time can be accomplished with the --since flag and a time/date “entry in the format “year-month-day hour:minute:seconds"
+
+
+Regardless of the logging system you use, you will have to *make decisions about retention on both local systems* and *central logging and monitoring infrastructure*. Take into account operational needs; likely scenarios where you may need the logs you collect; and **legal, compliance**, or other requirements that you need to meet. In many cases organisations choose to keep logs for 30, 45, 90, or 180 days depending on their needs, but some cases may even result in some logs being kept for a year or more. Retention comes with both hardware costs and potential legal challenges if you retain logs that you may not wish to disclose in court.
