@@ -1,0 +1,6 @@
+
+Not all forensic data can be found on disks or systems. Network forensics have an increasingly large role to play, whether they are for traditional wired and wireless networks, cellular networks, or others. *Since network traffic is ephemeral, capturing traffic for forensic investigation often requires a direct effort to capture and log the data in advance*. 
+
+If network traffic isn't actively being logged, *forensic artefacts like firewall logs, IDS and IPS logs, email server logs, authentication logs*, and other secondary sources may provide information about when a device was on a network, what traffic it sent, and where it sent the traffic.
+
+The *same taps, span ports, and port mirrors* used for network security devices can also be useful for network forensics, allowing copies of network traffic to be sent to collection servers. Although this can be useful, it can also result in massive amounts of data. Capturing all or selected network traffic is a process that most organisations reserve for specific purposes rather than a general practice. Instead, most organisations *end up relying on logs, metadata, traffic flow information, and other commonly collected network information* to support forensic activities.
