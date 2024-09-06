@@ -1,0 +1,10 @@
+
+In addition to forensic analysis, forensic techniques may be used to recover data from drives and devices. In fact, file recovery is a common need for organisations due to inadvertent deletions and system problems or errors.
+
+The ability to recover data in many cases relies on the fact that *deleting a file from a drive or device is nondestructive*. In other words, when a file is deleted, the fastest way to make the space available is to *simply delete the file's information from the drive's file index* and allow the space to be reused when it is needed. Quick formatting a drive in Windows only deletes the file index instead of overwriting or wiping the drive, and other operating systems behave similarly. So, recovering files with a recovery tool or by manual means requires reviewing the drive, **finding files based on headers or metadata**, and then recovering those files and file fragments.
+
+Forensic analysts rely on this when files have been intentionally deleted to try to hide evidence, and they refer to the open space on a drive as slack space. Slack space analysis is critical to forensic analysis because of the wealth of data about what has previously occurred on a drive that it can provide.
+
+>[!attention] Flash Media and SSDs: What About Wear Levelling?
+>
+Completely removing data from devices like SSDs and flash media that have space they use for wear levelling can be far more difficult than with traditional magnetic media like hard drives. Since wear levelling will *move data to less worn cells* (blocks of reserved spare space) as needed, those cells that have been marked as unusable due to wear **may still contain historic or current data on the drive**. Large drives can contain a significant percentage of spare wear levelling capacity—up to double digit percentages—which means that attempts to securely delete information on an SSD may fail. Fortunately, techniques like using *full-disk encryption* can ensure that even if data remains, it *cannot be easily recovered*.

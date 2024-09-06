@@ -10,3 +10,14 @@ The human side of digital forensics can also be important; **interviews with ind
 - [[Legal Holds and e-Discovery]]
 
 ### [[Conducting Digital Forensics]]
+
+### [[Reporting]]
+
+
+### Digital Forensics and Intelligence
+
+Although digital forensics work in most organisations is primarily used for legal cases, internal investigations, and incident response (IR), digital forensics **also plays a role in both strategic intelligence and counterintelligence efforts**. 
+
+The ability to analyse adversary actions and technology, including components and behaviours of advanced persistent threat tools and processes, has become a key tool in the arsenal for national defence and intelligence groups. At the same time, forensic capabilities *can be used for intelligence operations when systems and devices are recovered or acquired*, allowing forensic practitioners to recover data and provide it for analysis by intelligence organisations.
+
+Many of the tools that are used by traditional forensic practitioners are also part of the toolset used by intelligence and counterintelligence organisations. In addition to those capabilities, they require advanced methods of breaking encryption, analysing software and hardware, and recovering data from systems and devices that are designed to resist or entirely prevent tampering that would be part of a typical forensic process.

@@ -7,3 +7,10 @@ Along with the need for tools and capabilities that support discovery needs, org
 - **Data breach notification laws**, like other regulatory elements, also vary from country to country, and in the United States, notably from state to state. Contracts often cover the *maximum time that can elapse before customers are notified*, and ensuring that you have an appropriate breach notification clause in place that meets your needs can be important. Some vendors delay for days, weeks, or even months, potentially causing significant issues for customers who are unaware of the breach.
 
 Organisations that use cloud services must have a plan to handle potential incidents and investigations that doesn't rely on direct forensic techniques.
+
+
+### Regulation and Jurisdiction Issues: Venue and Nexus
+
+Regulatory and jurisdictional issues also come into play with two other legal concepts. The first is **venue**, which is the *location where a case is heard*. Many contracts will specify venue for cases, typically in a way that is beneficial to the service provider. If you sign a contract and don't pay attention to venue, legal cases might have to be handled far away in another state. 
+
+At the same time, **nexus** is the *concept of connection*. A common example of nexus is found in the decision of whether a company has nexus in a state or locality and must charge tax there. For years, nexus was decided on whether the company had a physical location, distribution centre, or otherwise did business physically in a state. Understanding how and why nexus may be decided can be important when you are *considering laws and regulations that may impact your organisation*.

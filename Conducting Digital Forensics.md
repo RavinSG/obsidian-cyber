@@ -52,3 +52,5 @@ In addition to these requirements, admissibility for digital forensics requires 
 ### [[Acquisition Tools]]
 
 ### [[Validating Forensic Data Integrity]]
+
+### [[Data Recovery]]
