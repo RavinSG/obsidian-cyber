@@ -19,7 +19,7 @@ The governance model described below is the one most commonly used in for-profit
 
 In addition to using a formal board of directors, governance structures may incorporate a variety of internal committees consisting of **subject matter experts** (*SMEs*) and managers. Government entities, such as regulatory agencies, may also play a role in the governance of some organisations. For example, banks may be regulated by the U.S. Treasury Department or similar agencies in other countries.
 
-### Understanding Policy Documents
+## Understanding Policy Documents
 
 An organisation's information security policy framework contains a series of documents designed to describe the organisation's cybersecurity program. The scope and complexity of these documents vary widely, depending on the nature of the organization and its information resources. These frameworks generally include four types of document:
 
@@ -37,3 +37,11 @@ As you prepare the documents in your policy framework, you should not only take 
 - Jurisdiction-specific considerations based on global, national, and/or local/regional issues in the areas where you operate
 
 ### [[Policies]]
+
+### [[Standards]]
+
+### [[Procedures]]
+
+### [[Guidelines]]
+
+### [[Exceptions and Compensating Controls]]

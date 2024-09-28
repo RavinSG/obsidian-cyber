@@ -1,0 +1,2 @@
+
+Guidelines *provide best practices and recommendations related to a given concept, technology, or task*. Compliance with guidelines is not mandatory, and guidelines are offered in the spirit of providing helpful advice. That said, the “optionality” of guidelines may vary significantly depending on the organisation's culture.
