@@ -5,7 +5,7 @@ Organisations may create procedures for *building new systems, releasing code to
 
 Organisations commonly include the following procedures in their policy frameworks:
 
-- **Change management procedures** that describe how the organization will perform change management activities that comply with the organisation's change management policy, including the possible use of version control and other tools
+- **Change management procedures** that describe how the organization will perform change management activities that comply with the organisation's [[Change Management]] policy, including the possible use of version control and other tools
   
 - **Onboarding and off-boarding procedures** that describe how the organization will add new user accounts as employees join the organization and how those accounts will be removed when no longer needed
   

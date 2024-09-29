@@ -31,5 +31,5 @@ Organisations commonly include the following documents in their information secu
   
 - *Software development life cycle (SDLC) policy* that establishes the processes and standards for developing and maintaining software, ensuring that security is considered and integrated at every stage of development
   
-- *Change management and change control policies* that describe how the organization will review, approve, and implement proposed changes to information systems in a manner that manages both cybersecurity and operational risk
+- *[[Change Management]] and change control policies* that describe how the organization will review, approve, and implement proposed changes to information systems in a manner that manages both cybersecurity and operational risk
 
