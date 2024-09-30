@@ -129,7 +129,8 @@ It would be wise to use the “find” command with “`-type f 2>/dev/nul`l” 
 
 Folders and files that can be written to or executed from:
 
-- `find / -writable -type d 2>/dev/null` : Find world-writeable folders
+- `
+` : Find world-writeable folders
 - `find / -perm -222 -type d 2>/dev/null`: Find world-writeable folders
 - `find / -perm -o w -type d 2>/dev/null`: Find world-writeable folders
 
