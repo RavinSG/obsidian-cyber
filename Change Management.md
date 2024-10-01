@@ -12,3 +12,5 @@ Changes often create unintended side effects that can cause outages. For example
 Unauthorised changes directly affect the A in the CIA triad—availability. However, *change management processes allow various IT experts to review proposed changes* for unintended side effects before implementing the changes. These processes also give administrators time to check their work in controlled environments before implementing changes in production environments.
 
 Additionally, some changes can weaken or reduce security. Imagine an organization isn't using an effective access control model to grant access to users. Administrators may not be able to keep up with the requests for additional access. Frustrated administrators may decide to add a group of users to an Administrators group within the network. Users will now have all the access they need, improving their ability to use the network, and they will no longer bother the administrators with access requests. However, granting administrator access in this way directly violates the least privilege principle and significantly weakens security.
+
+### [[Change Management Process and Controls]]
