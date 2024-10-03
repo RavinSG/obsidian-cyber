@@ -21,7 +21,15 @@ Accept-Ranges: bytes
 ```
 
 
-We can also use netcat to *listen on a TCP port* and connect to a listening port on another system.
+We can also use netcat to *listen on a TCP port* and connect to a listening port on another system. For example, **SSH** is programmed to handle connections over port 22 to send all data and keys. We can connect to TCP port 22 with netcat:
+
+```bash
+RavinSG@htb[/htb]$ netcat 10.10.10.10 22
+
+SSH-2.0-OpenSSH_8.4p1 Debian-3
+```
+
+As we can see, port 22 sent us its banner, stating that SSH is running on it. This technique is called *Banner Grabbing*, and can help identify what service is running on a particular port.
 
 On the server system, where you want to open a port and listen on it, you can issue `nc -lp 1234 `or better yet, `nc -vnlp 1234`, which is equivalent to `nc -v -l -n -p 1234`, as you would remember from the Linux room. The exact order of the letters does not matter as long as the port number is preceded directly by `-p`.
 
