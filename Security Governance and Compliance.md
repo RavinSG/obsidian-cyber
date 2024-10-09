@@ -6,3 +6,7 @@
 ### [[Personnel Management]]
 
 ### [[Third-Party Risk Management]]
+
+### [[Complying with Laws and Regulations]]
+
+### [[Adopting Standard Frameworks]]

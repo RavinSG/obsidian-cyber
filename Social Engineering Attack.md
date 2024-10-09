@@ -1,4 +1,4 @@
-[[Social Engineering]] is a manipulation technique that exploits human error to gain private information, access, or valuables. Some forms of social engineering attacks are: 
+ [[Social Engineering]] is a manipulation technique that exploits human error to gain private information, access, or valuables. Some forms of social engineering attacks are: 
 
 - [[Phishing]]
 - [[Smishing]]
