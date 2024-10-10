@@ -16,6 +16,6 @@ There are 7 steps in this [[National Institute of Standards and Technology|NIST]
 
 - **Authorise** -  Being accountable for the security and privacy risks that may exist in an organisation. The authorisation step could involve generating reports, developing plans of action, and establishing project milestones that are aligned to your organisation's security goals.
 
-- **Monitor** - Be aware of how systems are operating. Assessing and maintaining technical operations are tasks that analysts complete daily. Part of maintaining a low level of risk for an organization is knowing how the current systems support the organisation's security goals.
+- **Monitor** - Be aware of how systems are operating. Assessing and maintaining technical operations are tasks that analysts complete daily. Part of maintaining a low level of risk for an organisation is knowing how the current systems support the organisation's security goals.
 
 [[Risk Management]]
