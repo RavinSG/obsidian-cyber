@@ -25,8 +25,8 @@ As you prepare your organisation's standards, you should pay particular attentio
 
 - **Password standards** set forth requirements for password length, complexity, reuse, and similar issues.
   
-- **Access control standards** describe the account life cycle from provisioning through active use and decommissioning. This policy should include specific requirements for personnel who are employees of the organization as well as third-party contractors. It should also include requirements for credentials used by devices, service accounts, and administrator/root accounts.
+- **Access control standards** describe the account life cycle from provisioning through active use and decommissioning. This policy should include specific requirements for personnel who are employees of the organisation as well as third-party contractors. It should also include requirements for credentials used by devices, service accounts, and administrator/root accounts.
   
-- **Physical security standards** establish the guidelines for securing the physical premises and assets of the organization. This includes security measures like access control systems, surveillance cameras, security personnel, and policies regarding visitor access, protection of sensitive areas, and handling of physical security breaches.
+- **Physical security standards** establish the guidelines for securing the physical premises and assets of the organisation. This includes security measures like access control systems, surveillance cameras, security personnel, and policies regarding visitor access, protection of sensitive areas, and handling of physical security breaches.
   
 - **Encryption standards** specify the requirements for encrypting data both in transit and at rest. This includes the selection of encryption algorithms, key management practices, and the conditions under which data must be encrypted to protect the confidentiality and integrity of information.

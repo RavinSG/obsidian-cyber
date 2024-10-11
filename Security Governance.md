@@ -20,7 +20,7 @@ In addition to using a formal board of directors, governance structures may inco
 
 ## Understanding Policy Documents
 
-An organisation's information security policy framework contains a series of documents designed to describe the organisation's cybersecurity program. The scope and complexity of these documents vary widely, depending on the nature of the organization and its information resources. These frameworks generally include four types of document:
+An organisation's information security policy framework contains a series of documents designed to describe the organisation's cybersecurity program. The scope and complexity of these documents vary widely, depending on the nature of the organisation and its information resources. These frameworks generally include four types of document:
 
 - Policies
 - Standards

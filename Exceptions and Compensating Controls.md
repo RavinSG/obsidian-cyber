@@ -26,7 +26,7 @@ Many *exception processes require the use of compensating controls* to mitigate 
   
 - The control must address the requirement currently and in the future.
 
-For example, an organization might find that it **needs to run an outdated version of an operating system** on a specific machine because the software necessary to run the business will only function on that operating system version. *Most security policies would prohibit* using the outdated operating system because it might be susceptible to security vulnerabilities. The organization *could choose to run this system on an isolated network with either very little or no access to other systems* as a compensating control.
+For example, an organisation might find that it **needs to run an outdated version of an operating system** on a specific machine because the software necessary to run the business will only function on that operating system version. *Most security policies would prohibit* using the outdated operating system because it might be susceptible to security vulnerabilities. The organisation *could choose to run this system on an isolated network with either very little or no access to other systems* as a compensating control.
 
 The general idea is that a *compensating control finds alternative means to achieve an objective* when the organisation cannot meet the original control requirement. Although PCI DSS offers a very formal process for compensating controls, the use of compensating controls is a common strategy in many different organisations, even those not subject to PCI DSS. Compensating controls balance the fact that it simply isn't possible to implement every required security control in every circumstance with the desire to manage risk to the greatest feasible degree.
 
