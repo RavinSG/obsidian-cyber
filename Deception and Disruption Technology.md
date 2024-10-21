@@ -11,7 +11,7 @@ Much like honeypots, honeynets are networks set up and instrumented to collect i
 
 ### Honeyfiles
 
-Unlike honeynets and honeypots, which are used for adversarial research, honeyfiles are *used for intrusion detection*. A honeyfile is an intentionally attractive file that contains unique, detectable data that is left in an area that an attacker is likely to visit if they succeed in their attacks. If the data contained in a honeyfile is *detected leaving the network, or is later discovered outside of the network*, the organization knows that the *system was breached*.
+Unlike honeynets and honeypots, which are used for adversarial research, honeyfiles are *used for intrusion detection*. A honeyfile is an intentionally attractive file that contains unique, detectable data that is left in an area that an attacker is likely to visit if they succeed in their attacks. If the data contained in a honeyfile is *detected leaving the network, or is later discovered outside of the network*, the organisation knows that the *system was breached*.
 
 ### Honeytokens
 

@@ -29,7 +29,7 @@ Configuration changes are also a common remediation and containment technique. T
   
 - **Mobile device management** ([[Mobile Device Management|MDM]]) changes, including applying new policies or changing policies; responding by remotely wiping devices; locating devices; or using other MDM capabilities to assist in the IR process.
 
-- **Data loss prevention** ([[Data Loss Prevention|DLP]]) tool changes, which may focus on preventing data from leaving the organization or detecting new types or classifications of data from being sent or shared. DLP changes are likely to be reactive in most IR processes, but DLP can be used to help ensure that an ongoing incident has a lower chance of creating more data exposure.
+- **Data loss prevention** ([[Data Loss Prevention|DLP]]) tool changes, which may focus on preventing data from leaving the organisation or detecting new types or classifications of data from being sent or shared. DLP changes are likely to be reactive in most IR processes, but DLP can be used to help ensure that an ongoing incident has a lower chance of creating more data exposure.
   
 - **Content filter and URL filtering** capabilities, which can be used to ensure that specific sites are not able to be browsed or accessed. Content filter and URL filtering can help prevent malware from phoning home or connecting to C2 sites, and it can also prevent users from responding to phishing attacks and similar threats.
   

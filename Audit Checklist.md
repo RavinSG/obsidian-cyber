@@ -4,7 +4,7 @@ It’s necessary to create an audit checklist before conducting an [[Security Au
 #### Identify the scope of the audit
 The audit should:
 - List assets that will be assessed (e.g., firewalls are configured correctly, PII is secure, physical assets are locked, etc.) 
-- Note how the audit will help the organization achieve its desired goals
+- Note how the audit will help the organisation achieve its desired goals
 - Indicate how often an audit should be performed
 - Include an evaluation of organisational policies, protocols, and procedures to make sure they are working as intended and being implemented by employees
 

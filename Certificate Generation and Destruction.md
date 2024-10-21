@@ -38,7 +38,7 @@ Occasionally, a certificate authority needs to revoke a certificate. This might 
 - The certificate was compromised (for example, the certificate owner accidentally gave away the private key).
 - The certificate was erroneously issued (for example, the CA mistakenly issued a certificate without proper verification).
 - The details of the certificate changed (for example, the subject's name changed).
-- The security association changed (for example, the subject is no longer employed by the organization sponsoring the certificate).
+- The security association changed (for example, the subject is no longer employed by the organisation sponsoring the certificate).
 
 You can use three techniques to verify the authenticity of certificates and identify revoked certificates:
 
