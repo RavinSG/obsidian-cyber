@@ -39,3 +39,14 @@ Data protection officers are **responsible for monitoring the internal complianc
 ### Data stewards
 
 Data stewards are individuals who *carry out the intent of the data controller* and are delegated responsibility from the controller.
+
+
+**Data owner**: The data owner is accountable for specific data, so this person is often a
+senior officer of the organisation.
+
+**Data controller**: A data controller manages the processing of the data. For example, a
+payroll department would be a data controller, and a payroll servicing company would be the data processor.
+
+**Data steward**: The data steward manages access rights to the data. In this example, the IT team would be the data steward.
+
+**Data processor**: The data processor is often a third-party that processes data on behalf of the data controller.

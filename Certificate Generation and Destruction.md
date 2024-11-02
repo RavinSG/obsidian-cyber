@@ -48,10 +48,10 @@ You can use three techniques to verify the authenticity of certificates and iden
   
 - **Certificate Stapling** The primary issue with OCSP is that it places a significant burden on the OCSP servers operated by certificate authorities. These servers must process requests from every single visitor to a website or other user of a digital certificate, verifying that the certificate is valid and not revoked.
 
-Certificate stapling is an extension to the Online Certificate Status Protocol that relieves some of the burden placed upon certificate authorities by the original protocol.
-
-In certificate stapling, the *web server contacts the OCSP* server itself and receives a signed and timestamped response from the OCSP server, which it then *attaches*, or staples, *to the digital certificate*.
-
-Then, when a user requests a secure web connection, the web server sends the certificate with the stapled OCSP response to the user. The *user's browser* then *verifies that the certificate is authentic* and also validates that the stapled OCSP response is genuine and recent.
-
-The time savings come when the *next user visits* the website. The web server can simply *reuse the stapled certificate*, without recontacting the OCSP server.
+	Certificate stapling is an extension to the Online Certificate Status Protocol that relieves some of the burden placed upon certificate authorities by the original protocol.
+	
+	In certificate stapling, the *web server contacts the OCSP* server itself and receives a signed and timestamped response from the OCSP server, which it then *attaches*, or staples, *to the digital certificate*.
+	
+	Then, when a user requests a secure web connection, the web server sends the certificate with the stapled OCSP response to the user. The *user's browser* then *verifies that the certificate is authentic* and also validates that the stapled OCSP response is genuine and recent.
+	
+	The time savings come when the *next user visits* the website. The web server can simply *reuse the stapled certificate*, without recontacting the OCSP server.
