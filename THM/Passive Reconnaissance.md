@@ -17,6 +17,8 @@ Examples of active reconnaissance activities include:
 - Calling the company in an attempt to get information (social engineering).
 - Entering company premises pretending to be a repairman.
 
+The [bugcrowd](https://www.bugcrowd.com) website has a list of companies that have provided the authority to perform bug bounties.
+
 ## whois
 
 WHOIS is a request and response protocol that follows the [RFC 3912](https://www.ietf.org/rfc/rfc3912.txt) specification. A WHOIS server listens on **TCP port 43** for incoming requests. The domain registrar is responsible for maintaining the WHOIS records for the domain names it is leasing. 
