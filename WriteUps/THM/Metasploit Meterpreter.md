@@ -239,7 +239,7 @@ msf6 post(windows/gather/enum_shares) > run
 [*] Post module execution completed
 ```
 
-### NLTM Hashes
+### NTLM Hashes
 
 By running the `hashdump` command, we can get get the target systems password hash file.
 
