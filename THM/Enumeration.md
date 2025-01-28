@@ -129,9 +129,8 @@ It would be wise to use the “find” command with “`-type f 2>/dev/nul`l” 
 
 Folders and files that can be written to or executed from:
 
-- `
-` : Find world-writeable folders
-- `find / -perm -222 -type d 2>/dev/null`: Find world-writeable folders
-- `find / -perm -o w -type d 2>/dev/null`: Find world-writeable folders
+- Find world-writeable folders
+	- `find / -perm -222 -type d 2>/dev/null`: Find world-writeable folders
+	- `find / -perm -o w -type d 2>/dev/null`: Find world-writeable folders
 
 The reason we see three different “find” commands that could potentially lead to the same result can be seen in the manual document. As you can see below, the perm parameter affects the way “find” works.
