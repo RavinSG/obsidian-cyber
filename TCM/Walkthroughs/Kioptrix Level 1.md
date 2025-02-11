@@ -212,3 +212,12 @@ NT_STATUS_NETWORK_ACCESS_DENIED listing \*
 
 We cannot access the `ADMIN$` share since it requires a password but can access the `IPC$` share. However, we cannot list anything in that share since listing is denied.
 
+> [!bug] Trans2Open
+> This exploits the buffer overflow found in Samba versions 2.2.0 to 2.2.8. This particular module is capable of exploiting the flaw on x86 Linux systems that do not have the noexec stack option set. NOTE: Some older versions of RedHat do not seem to be vulnerable since they apparently do not allow anonymous access to IPC. [link](https://www.rapid7.com/db/modules/exploit/linux/samba/trans2open/)
+
+#### mod_ssl
+
+> [!bug] OpenFuck
+This machine is running the mod_ssl 2.8.4 version, which is vulnerable to the 'OpenFuck' exploit. [link](https://www.exploit-db.com/exploits/764) We can either use a [GitHub](https://github.com/heltonWernik/OpenLuck) implementation or the Metasploit framework to exploit this vulnerability.
+
+![[Screenshot 2025-02-11 at 9.42.09 pm.png]]
