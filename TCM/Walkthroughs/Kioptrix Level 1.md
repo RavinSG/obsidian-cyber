@@ -221,3 +221,4 @@ We cannot access the `ADMIN$` share since it requires a password but can access 
 This machine is running the mod_ssl 2.8.4 version, which is vulnerable to the 'OpenFuck' exploit. [link](https://www.exploit-db.com/exploits/764) We can either use a [GitHub](https://github.com/heltonWernik/OpenLuck) implementation or the Metasploit framework to exploit this vulnerability.
 
 ![[Screenshot 2025-02-11 at 9.42.09 pm.png]]
+
