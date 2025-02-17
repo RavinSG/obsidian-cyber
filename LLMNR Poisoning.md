@@ -11,6 +11,10 @@ The flaw in this protocol is, it uses the user's username and the NTLMv2 hash wh
 sudo responder -I tunO -dwP
 ```
 
+`-d`: Enable answers for DHCP broadcast requests. This option will inject a WPAD server in the DHCP response.  
+`-w`: Start the WPAD rogue proxy server. Default value is False
+`-P`: Force NTLM (transparently)/Basic (prompt) authentication for the proxy. WPAD doesn't need to be ON. This option is highly effective. Default: False
+
 ![[LLMNR Responder Output.png]]
 
 2. Once a request is made, the responder can catch it with the username of the client along their NTLM hash.
@@ -23,3 +27,4 @@ hashcat —m 5600 hashes.txt rockyou.txt
 ```
    ![[LLMNR Hash Crack.png]]
    
+
