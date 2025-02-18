@@ -1,6 +1,5 @@
 
-Managing threat information at any scale *requires standardisation and tooling* to allow the [[Threat Intelligence|threat information]] to be processed and used in automated ways. Indicator management can be much easier with a defined set of terms. That's where structured markup languages like
-**STIX** and **OpenIOC** come in.
+Managing threat information at any scale *requires standardisation and tooling* to allow the [[Threat Intelligence|threat information]] to be processed and used in automated ways. Indicator management can be much easier with a defined set of terms. That's where structured markup languages like **STIX** and **OpenIOC** come in.
 
 ### Structured Threat Information eXpression (STIX)
 STIX is an *XML language* originally sponsored by the U.S. Department of Homeland Security. In its current version, **STIX 2.1** defines *18 STIX domain* objects, including things like attack patterns, identities, malware, threat actors, and tools.

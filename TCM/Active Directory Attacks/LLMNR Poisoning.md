@@ -8,7 +8,7 @@ The flaw in this protocol is, it uses the user's username and the NTLMv2 hash wh
 1. First we can use a tool like responder to listen to LLMNR messages in a network. 
    
 ```bash
-sudo responder -I tunO -dwP
+sudo responder -I eth0 -dwP
 ```
 
 `-d`: Enable answers for DHCP broadcast requests. This option will inject a WPAD server in the DHCP response.  
