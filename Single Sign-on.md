@@ -2,8 +2,6 @@
 aliases:
   - SSO
 ---
-
-
 ## Google Cert
 
 Single sign-on (**SSO**) is a technology that combines several different logins into one. More companies are turning to SSO as a solution to their authentication needs for three reasons:
