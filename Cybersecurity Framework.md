@@ -2,7 +2,7 @@
 aliases:
   - CSF
 ---
-The National Institute of Standards and Technology ([[National Institute of Standards and Technology|NIST]]) is a U.S.-based agency that develops multiple voluntary compliance [[Security Frameworks|framework]] that organisations worldwide can use to help manage risk. The more aligned an organization is with compliance, the lower the risk.
+The National Institute of Standards and Technology ([[National Institute of Standards and Technology|NIST]]) is a U.S.-based agency that develops multiple voluntary compliance [[Security Frameworks|framework]] that organisations worldwide can use to help manage risk. The more aligned an organisation is with compliance, the lower the risk.
 
 The framework consists of three main components: the **core**, **tiers**, and **profiles**
 #### Core
@@ -13,7 +13,7 @@ There are 5 core functions:
 
 - **Identify** - The management of cybersecurity risk and its effect on an organisation's people and assets
 
-- **Protect** - The strategy used to protect an organization through the implementation of policies, procedures, training, and tools that help mitigate cybersecurity threats.
+- **Protect** - The strategy used to protect an organisation through the implementation of policies, procedures, training, and tools that help mitigate cybersecurity threats.
 
 - **Detect** - Identifying potential security incidents and improving monitoring capabilities to increase the speed and efficiency of detections.
 
@@ -31,7 +31,7 @@ The CSF profiles are pre-made templates of the NIST CSF that are developed by a 
 
 ### Implementing the CSF
 
-In any scenario, the U.S. Cybersecurity and Infrastructure Security Agency (**CISA**) provides detailed guidance that any organization can use to implement the CSF. This is a quick overview and summary of their recommendations:
+In any scenario, the U.S. Cybersecurity and Infrastructure Security Agency (**CISA**) provides detailed guidance that any organisation can use to implement the CSF. This is a quick overview and summary of their recommendations:
 
 - *Create a current profile* of the security operations and outline the specific needs of your business.
 
