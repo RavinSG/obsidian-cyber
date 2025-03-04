@@ -78,7 +78,7 @@ We need to turn off **SMB** and **HTTP** to make sure the hashes are not only ca
 
 Once the Responder catches a hash, it will be forwarded to the ntlmrelayx, which will then forward it to the selected target. Since we need a network event, we point machine 1 towards the attacker.  We get the following output from ntlmrelayx.
 
-![[ntlmrelayx output.png]]
+![[ntlmrelayx output.png]] ^c05678
 
 We can see the first attempt was to relay the hash to `192.168.23.131`. However, since this is the same machine the hash originated from, the attack fails. 
 
@@ -94,3 +94,21 @@ We can a `-i` to get an interactive shell using ntlmrelayx instead of getting th
 [[SMB]]
 
 using `ntlmrelayx.py` -  https://www.secureauth.com/resources/we-love-relaying-credentials-a-technical-guide-to-relaying-credentials-everywhere/
+
+### Defences
+
+- Enable SMB Signing on all devices
+	- *Pro*: Completely stops the attack
+	- **Con**: Can cause performance issues with file copies
+	  
+- Disable NLTM authentication on network
+	- *Pro*: Completely stops the attack
+	- **Con**: If Kerberos stops working, Windows will default back to NLTM
+	  
+- Account Tiering
+	- *Pro*: Limits domain admins to specific tasks (e.g. only log onto servers with need for DA)
+	- **Con**: Enforcing the policy may be difficult
+- Local Admin Restriction:
+  
+	- *Pro*: Can prevent a lot of lateral movement
+	- **Con**: Potential increase in the amount of service desk tickets
