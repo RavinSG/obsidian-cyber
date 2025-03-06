@@ -76,7 +76,7 @@ We need to turn off **SMB** and **HTTP** to make sure the hashes are not only ca
 
 ### Setup ntlmrelayx
 
-Once the Responder catches a hash, it will be forwarded to the ntlmrelayx, which will then forward it to the selected target. Since we need a network event, we point machine 1 towards the attacker.  We get the following output from ntlmrelayx.
+Once the Responder catches a hash, it will be forwarded to the ntlmrelayx, which will then forward it to the selected target. Since we need a network event, we point machine 1 towards the attacker.  We get the following output from ntlmrelayx. ^setupNtlmrelayx
 
 ![[ntlmrelayx output.png]] ^c05678
 
