@@ -78,3 +78,16 @@ From the above screenshot we can see that a new user has been created. However, 
 However, they have access to the **Enterprise Admins** group and they are going to have the necessary access needed to run `secretsdump` and dump all the secrets of the domain and compromise the domain to completely own the domain.
 
 ### Defences
+
+IPv6 poisoning abuses the fact that Windows *queries for an IPv6 address even in IPv4-only environments*. If you do not use IPv6 internally, the safest way to prevent mitm6 is to **block DHCPv6 traffic and incoming router advertisements** in Windows Firewall via Group Policy. 
+
+1. *Disabling IPv6 entirely may have unwanted side effects*. Setting the following predefined rules to Block instead of Allow prevents the attack from working:
+	- (Inbound) Core Networking - Dynamic Host Configuration Protocol for IPv6(DHCPV6-In)
+	- (Inbound) Core Networking - Router Advertisement (ICMPv6-In)
+	- (Outbound) Core Networking - Dynamic Host Configuration Protocol for IPv6(DHCPV6- Out)
+
+2. If *WPAD is not in use internally*, **disable** it via Group Policy and by **disabling the WinHttpAutoProxySvc service**.
+   
+3. Relaying to LDAP and LDAPS can only be mitigated by *enabling both LDAP signing and LDAP channel binding*.
+   
+4. Consider *Administrative users to the Protected Users group* or marking them as *Account is sensitive and cannot be delegated*, which will prevent any impersonation of that user via delegation.
