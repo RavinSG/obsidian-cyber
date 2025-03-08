@@ -12,7 +12,7 @@ In addition if a user logs in, we can perform a **LDAP relay** attack with the N
 We are going to setup ntlmrelayx similar to what we did in the [[SMB Relay#^setupNtlmrelayx|SMB Relay attack]]. 
 
 ```bash
-$ impacket-ntlmrelayx -6 -t ldaps://192.168.23.130 -wh fakewpad.marvel.local -l lootme/marvel
+$ ntlmrelayx.py -6 -t ldaps://192.168.23.130 -wh fakewpad.marvel.local -l lootme/marvel
 ```
 
 `-6`: We are listening for both IPv6 and IPv4
@@ -30,7 +30,15 @@ We will then start the Man in the Middle attack with `mitm6` to intercept and se
 $ sudo mitm6 -d marvel.local
 ```
 
-As soon as an event occurs in a network such as rebooting a machine or a person logging in to a device, mitm6 will allow us to take that and relay it to the domain controller with ntlmrelayx.
+mitm6 will start assigning IPv6 addresses to machines in the network as below.
+
+![[IPv6 Address Assign.png]]
+
+As soon as an event occurs in a network such as rebooting a machine or a person logging in to a device, mitm6 will allow us to take that and relay it to the domain controller with ntlmrelayx. 
+
+The following image shows a successful authentication attack that takes place when the `MARVEL\PUNISHER` machine reboots. Even without a user entering a password, we are able to gain access to the domain controller and dump the available information to the loot directory.
+
+![[ntlmrelayx Authentication Success.png]]
 
 >[!warning] Do not set up and walk away
 >Only run this in small sprints (5-10mins), or this will start causing issues in the network and might kick yourself out without being able to authenticate back into the compromised machine.
@@ -41,4 +49,32 @@ Once ntlmrelayx successfully authenticates as an user, it will then enumerate th
 
 ![[Loot Directory.png]]
 
-If we look into the `domain_computers.html` file, we can see which OS each machine in the domain is running. If there are any older vulnerable OS available, we can target them 
+If we look into the `domain_computers.html` file, we can see which OS each machine in the domain is running. If there are **any older vulnerable OS available**, we can target them.
+
+![[Loot Dir Domain Computers.png]]
+
+One of the other important files to look at is the `domain_users_by_group.html` file. We can gain information such as who are *Administrators*, *Domain Admins*, and *Enterprise Admins*.
+
+We can further get to know when were these *accounts created*, when were the *last logins* to the accounts, and *flags*. If we see an account with no logins since created, it might be a **honeypot** account.
+
+Furthermore, there can be instances where passwords are stored in the description due to user error or laziness, as shown below.
+
+![[Loot Dir Domain Users by Group.png]]
+
+### Administrator Login
+
+If an administrator logs in while the attack is running, this will be captured by ntlmrelayx as follow.
+
+![[mitm6 Admin Login.png]]
+
+Once this login in event is captures, ntlmrelayx is going to create an Access Control List for us and create a new user. In this case, we have successfully created a user named `FjtVrSYkpZ` with the password `+>Xp-byamJTtpp;` for us to log in as. We can now try to do a [[DCSync Attack]] with `secretsdump.py` as suggested as well.
+
+We can verify the user creation by logging into the server and checking the available users. 
+
+![[New User Permissions.png]]
+
+From the above screenshot we can see that a new user has been created. However, they are not a Domain Admin but a **Domain User**. Hence, they do not have access to all machines in the domain. 
+
+However, they have access to the **Enterprise Admins** group and they are going to have the necessary access needed to run `secretsdump` and dump all the secrets of the domain and compromise the domain to completely own the domain.
+
+### Defences
