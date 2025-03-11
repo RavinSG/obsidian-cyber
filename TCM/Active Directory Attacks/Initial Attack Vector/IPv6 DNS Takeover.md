@@ -36,7 +36,7 @@ mitm6 will start assigning IPv6 addresses to machines in the network as below.
 
 As soon as an event occurs in a network such as rebooting a machine or a person logging in to a device, mitm6 will allow us to take that and relay it to the domain controller with ntlmrelayx. 
 
-The following image shows a successful authentication attack that takes place when the `MARVEL\PUNISHER` machine reboots. Even without a user entering a password, we are able to gain access to the domain controller and dump the available information to the loot directory.
+The following image shows a successful authentication attack that takes place when the `MARVEL\PUNISHER` machine reboots. Even without a user entering a password, we are able to gain access to the domain controller and dump the available information to the loot directory using [[ldapdomaindump]].
 
 ![[ntlmrelayx Authentication Success.png]]
 
