@@ -5,7 +5,7 @@ We can save outputs in mainly 3 formats:
 - Grepable 
 - XML
 
-### Normal
+## Normal
 
 As the name implies, the normal format is similar to the output you get on the screen when scanning a target. You can save your scan in normal format by using `-oN FILENAME;` N stands for normal. Here is an example of the result.
 
@@ -34,7 +34,7 @@ OS and Service detection performed. Please report any incorrect results at https
 # Nmap done at Fri Sep 10 05:14:28 2021 -- 1 IP address (1 host up) scanned in 9.99 seconds
 ```
 
-### Grepable
+## Grepable
 
 The grepable format has its name from the command `grep`; **grep** stands for *Global Regular Expression Printer*. In simple terms, *it makes filtering the scan output for specific keywords or terms efficient*. 
 
@@ -48,6 +48,6 @@ Host: MACHINE_IP	Ports: 22/open/tcp//ssh//OpenSSH 6.7p1 Debian 5+deb8u8 (protoco
 # Nmap done at Fri Sep 10 05:14:28 2021 -- 1 IP address (1 host up) scanned in 9.99 seconds
 ```
 
-### XML
+## XML
 
 The third format is XML. You can save the scan results in XML format using `-oX FILENAME`. The XML format would be most *convenient to process the output in other programs*. Conveniently enough, you can save the scan output in all three formats using `-oA FILENAME` to combine `-oN`, `-oG`, and `-oX` for normal, grepable, and XML.

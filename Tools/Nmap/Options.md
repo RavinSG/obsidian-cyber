@@ -1,17 +1,17 @@
 
-### Address Ranges
+## Address Ranges
 
 - `10.11.12.15-20` will scan 6 IP addresses, from `10.11.12.15` to `10.11.12.20`
 - `10.11.12.15/30` will scan 4 IP addresses, from `10.11.12.12` to `10.11.12.15`
 
-### Target Specification
+## Target Specification
 
 `-iL <inputfilename>`: Input from list of hosts/networks
 `-iR <num hosts>`: Choose random targets
 `--exclude <host1[,host2][,host3],...>`: Exclude hosts/networks
 `--excludefile <exclude_file>`: Exclude list from file
 
-### HOST DISCOVERY
+## HOST DISCOVERY
 
 `-sL`: List Scan - simply list targets to scan
 `-sn`: Ping Scan - disable port scan
@@ -24,7 +24,7 @@
 `--system-dns`: Use OS's DNS resolver
 `--traceroute`: Trace hop path to each host
 
-### SCAN TECHNIQUES
+## SCAN TECHNIQUES
 
 `-sS/sT/sA/sW/sM`: TCP SYN/Connect()/ACK/Window/Maimon scans
 `-sU`: UDP Scan
@@ -35,7 +35,7 @@
 `-sO`: IP protocol scan
 `-b <FTP relay host>`: FTP bounce scan
 
-### PORT SPECIFICATION AND SCAN ORDER
+## PORT SPECIFICATION AND SCAN ORDER
 
 `-p <port ranges>`: Only scan specified ports
 	Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9
@@ -45,7 +45,7 @@
 `--top-ports <number>`: Scan `<number>` most common ports
 `--port-ratio <ratio>`: Scan ports more common than `<ratio>`
 
-### SERVICE/VERSION DETECTION
+## SERVICE/VERSION DETECTION
 
 `-sV`: Probe open ports to determine service/version info
 `--version-intensity <level>`: Set from 0 (light) to 9 (try all probes)

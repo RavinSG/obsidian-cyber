@@ -2,7 +2,7 @@
 URL: https://tryhackme.com/r/room/steelmountain
 Machine IP: 10.10.82.184
 ---
-### Initial Port Scan
+## Initial Port Scan
 
 We will first run a namp scan on the machine to figure out the opened ports and save it under `nmap/initial`.
 
@@ -116,7 +116,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Fri Apr 19 18:30:44 2024 -- 1 IP address (1 host up) scanned in 138.50 seconds
 ```
 
-### Webservers
+## Webservers
 
 Since we see there is a webserver running on port 80 of the machine, we can visit it via a web browser. By viewing the source of the page, we see that the image under employee of the month is named as `BillHarper`.
 
@@ -143,7 +143,7 @@ In addition to this, there's another webserver running on port `8080`. After vis
 
 A quick google search reveals that there is a [RCE vulnerability](https://nvd.nist.gov/vuln/detail/CVE-2014-6287) present in this version under `CVE-2014-6287`. We can use metasploit to exploit this and gain access to the server.
 
-### Exploiting Rejetto HFS
+## Exploiting Rejetto HFS
 
 Searching for modules under Rejetto in Metasploit, provides us the following result.
 
@@ -218,7 +218,7 @@ msf6 exploit(windows/http/rejetto_hfs_exec) > run
 meterpreter >
 ```
 
-### PrivEsc
+## PrivEsc
 
 To escalate our privileges from a user account to an admin account, we can enumerate the machine to detect any abnormal services running with elevated privileges. The [PowerUp](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1) script can be used to detect such abnormalities.
 

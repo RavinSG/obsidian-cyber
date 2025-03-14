@@ -1,5 +1,5 @@
 The ip address if the machine is `192.168.1.139`
-### Scans 
+## Scans 
 #### Initial Nmap Scan
 
 ```bash
@@ -140,14 +140,14 @@ It shows the default apache web page, which is not a good practice. Furthermore,
 
 ![[Kioptrix_404.png]]
 
-### Enumeration
+## Enumeration
 
 #### Dirbuster
 
 ![[Kipotrix_Dirbuster.png]]
 
 A scan of the server directories using dirbuster comes up with the above folder structure. There seems to be a `test.php` file that has nothing to do with production. Which hints as poor hygiene. 
-### Information Disclosure
+## Information Disclosure
 
 #### Server Headers
 
@@ -157,7 +157,7 @@ A scan of the server directories using dirbuster comes up with the above folder 
 
 ![[Kioptrix_Default_web_page.png]]
 
-### Vulnerabilities
+## Vulnerabilities
 
 #### SMB
 

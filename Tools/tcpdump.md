@@ -3,7 +3,7 @@
 
 tcpdump provides a brief packet analysis and converts key information about network traffic into formats easily read by humans. It prints information about each packet directly into your terminal. tcpdump also displays the source IP address, destination IP addresses, and the port numbers being used in the communications. 
 
-### Interpreting output
+## Interpreting output
 
 tcpdump prints the output of the command as the sniffed packets in the command line, and optionally to a log file, after a command is executed. The output of a packet capture contains many pieces of important information about the network traffic. 
 
@@ -21,7 +21,7 @@ Some information you receive from a packet capture includes:
 
 - **Destination port**: This port number is where the packet is being transmitted to.
 
-### Common uses
+## Common uses
 
 tcpdump and other network protocol analysers are commonly used to *capture and view network communications* and to *collect statistics about the network*, such as troubleshooting network performance issues. They can also be used to:
 
@@ -35,7 +35,7 @@ tcpdump and other network protocol analysers are commonly used to *capture and v
 
 However, **attackers** can also use network protocol analysers **maliciously to gain information** about a specific network. For example, attackers can capture data packets that contain sensitive information, such as account usernames and passwords. 
 
-### Example Capture
+## Example Capture
 
 Consider a user checking his email messages using **POP3**. First, we are going to use Tcpdump to attempt to capture the username and password. In the terminal output below, we used the command `sudo tcpdump port 110 -A`.
 

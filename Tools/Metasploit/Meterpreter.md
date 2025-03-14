@@ -3,7 +3,7 @@ Meterpreter is a Metasploit payload that supports the penetration testing proces
 
 Meterpreter has many versions which will provide different functionalities based on the target system.
 
-### How does Meterpreter work?
+## How does Meterpreter work?
 
 Meterpreter runs on the target system but is *not installed on it*. It **runs in memory** and does not write itself to the disk on the target. This feature aims to avoid being detected during antivirus scans. By default, most antivirus software will scan new files on the disk (e.g. when you download a file from the internet). This way, Meterpreter will be seen as a process and not have a file on the target system.
 
@@ -11,7 +11,7 @@ Meterpreter also aims to avoid being detected by network-based IPS (Intrusion Pr
 
 While *Meterpreter is recognised by major antivirus software*, this feature provides some degree of stealth.
 
-### Meterpreter Flavours
+## Meterpreter Flavours
 
 The easiest way to have an idea about available Meterpreter versions could be to list them using msfvenom, as seen below. 
 
@@ -60,7 +60,7 @@ msf6 > use exploit/windows/smb/ms17_010_eternalblue
 
 You can also list other available payloads using the `show payloads` command with any module.
 
-### [[Meterpreter Commands]]
+## [[Meterpreter Commands]]
 
 ### Post-Exploitation
 

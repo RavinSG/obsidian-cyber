@@ -135,9 +135,9 @@ Meterpreter     : x86/windows
 
 Now we have successfully created a connection to the target machine. We can start traversing directories and exfiltrating data now.
 
-## Data Exfiltration
+# Data Exfiltration
 
-### SMB Shares
+## SMB Shares
 
 We can now enumerate available SMB shares and get information about them. To do this we can search for a module that enables us to enumerates smb shares. This can be found by typing `search smb share` in msfconsole. To move from the meterpreter back to msfconsole we can background the session by typing `bg`.
 
@@ -239,7 +239,7 @@ msf6 post(windows/gather/enum_shares) > run
 [*] Post module execution completed
 ```
 
-### NTLM Hashes
+## NTLM Hashes
 
 By running the `hashdump` command, we can get get the target systems password hash file.
 
@@ -261,7 +261,8 @@ After the hashes are dumped, we can use john to crack them. If the hashdump was 
 ```bash
 $ john --wordlist=/usr/share/wordlists/rockyou.txt --format=NT hash.txt
 ```
-### Flags
+
+## Flags
 
 We can then search for flags by using the search command.
 

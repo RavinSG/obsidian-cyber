@@ -7,7 +7,7 @@ Although the security protocols and standards that a network uses are important,
   
 - **Enterprise authentication** relies on a RADIUS server and utilises an Extensible Authentication Protocol ([[Extensible Authentication Protocol|EAP]]) for authentication.
 
-### Wireless Authentication Protocols
+# Wireless Authentication Protocols
 
 **802.1X** is an IEEE standard for access control and is *used for both wired and wireless devices*. In wireless networks, 802.1X is used to integrate with [[Remote Authentication Dial-in User Service|RADIUS]] servers, allowing enterprise users to authenticate and gain access to the network. Additional actions can be taken based on information about the users, such as *placing them in groups or network zones*, or *taking other actions based on attributes* once the user has been authenticated.
 

@@ -23,4 +23,4 @@ WPA3-Enterprise provides stronger encryption than WPA2, with an *optional 192-bi
 >As WPA3 slowly expands in usage, it is important to note the security improvements it brings. *WPA3-Personal replaces the WPA2-PSK* authentication mode SAE (simultaneous authentication of equals) and implements perfect forward secrecy to keep traffic secure. WPA3-Enterprise continues to use RADIUS but improves the encryption and key management features built into the protocol, and *provides greater protection for wireless frames*. Open Wi-Fi networks also get an upgrade with the Wi-Fi Enhanced Open certification, which uses **opportunistic wireless encryption** (OWE) to provide encrypted Wi-Fi on open networks when possible—a major upgrade from the unencrypted open networks used with WPA2.
 
 
-### [[Wireless Authentication]]
+## [[Wireless Authentication]]

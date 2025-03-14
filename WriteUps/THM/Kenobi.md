@@ -2,7 +2,7 @@
 URL: https://tryhackme.com/r/room/kenobi
 Machine IP: 10.10.166.119
 ---
-### Initial Port Scan
+## Initial Port Scan
 
 We will first run a namp scan on the machine to figure out the opened ports and save it under `nmap/initial`.
 
@@ -65,7 +65,7 @@ PORT     STATE SERVICE     REASON  VERSION
 Service Info: Host: KENOBI; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-### Enumerating Samba 
+## Enumerating Samba 
 
 We can use namp scripts to enumerate for samba shares and users.
 
@@ -168,7 +168,7 @@ Port				21
 .
 ```
 
-### ProFTPD 1.3.5 Exploit
+## ProFTPD 1.3.5 Exploit
 
 Based on the log file and the initial scan from nmap, we know a **ProFTDP** server running `version 1.3.5` is available on port 21. Searching for exploits for this particular version with searchsploit gives us the following results.
 
@@ -187,7 +187,7 @@ Shellcodes: No Results
 
 There seems to be a `mod_copy` module related exploit where any unauthenticated user can copy files from any part of the system to a chosen destination ([more info](https://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_modcopy_exec/)). This is done by using the `SITE CPFR` and `SITE CPTO` command.
 
-### rpcbind
+## rpcbind
 
 However, we should now find a way to access a directory on the server based on the set of available ports before copying information using the ProFTPD vulnerability. From the nmap scan, under port 111 we noticed that rcpbind is running with access to `nfs`. We can use nmap scripts to enumerate this and find if there are any mounts.
 
@@ -232,7 +232,7 @@ drwxr-xr-x  3 root root  4096 Sep  4  2019 www
 
 We have now successfully created a network mount on our local machine. We can now use this directory to exfiltrate data using the ProFTPD exploit.
 
-### Data Exfiltration
+## Data Exfiltration
 
 We can copy the kenobi user's `id_rsa` file to the `/var/tmp` directory. However, we must first connect to the FTP server to issue the `SITE CPFR` and `SITE CPTO` commands.
 
@@ -278,7 +278,7 @@ kenobi@kenobi:~$
 
 Now we have successfully logged in as the kenobi user. Next step is to escalate our privileges.
 
-### PrivEsc
+## PrivEsc
 
 We can scan the machine to find if there are any binaries running with the `SUID` bit set.
 

@@ -27,7 +27,7 @@ A reputable VPN also minimises *its own access to user internet activity* by usi
 
 A software-defined wide area network (**SD-WAN**) is a virtual WAN service that allows organisations to securely connect users to applications across multiple locations and over large geographical distances.  
 
-### VPN Protocols
+## VPN Protocols
 
 A VPN protocol is similar to a network protocol: It’s a set of rules or instructions that will determine how data moves between endpoints. An endpoint is any device connected on a network. Some examples of endpoints include computers, mobile devices, and servers.
 
@@ -41,7 +41,7 @@ IPSec is another VPN protocol that may be used to set up VPNs. Most VPN provider
 
 Although IPSec and WireGuard are both VPN protocols, *IPSec is older and more complex than WireGuard*. Some clients may prefer IPSec due to its longer history of use, extensive security testing, and widespread adoption. However, others may prefer WireGuard because of its potential for better performance and simpler configuration.
 
-### Remote access and site-to-site VPNs
+## Remote access and site-to-site VPNs
 
 **Individual users** use *remote access VPNs to establish a connection between a personal device and a VPN server*. Remote access VPNs encrypt data sent or received through a personal device. The connection between the user and the remote access VPN is established through the internet.
 

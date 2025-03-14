@@ -1,7 +1,7 @@
 
 Triaging is used to assess alerts and assign priority to incidents.
 
-### Triage process
+## Triage process
 
 Incidents can have the *potential to cause significant damage* to an organization. Security teams must respond quickly and efficiently to prevent or limit the impact of an incident before it becomes too late. Triage is the *prioritising of incidents according to their level of importance or urgency*. The triage process helps security teams evaluate and prioritise security alerts and allocate resources effectively so that the most critical issues are addressed first. 
 
@@ -39,7 +39,7 @@ Once the alert has been properly assessed and verified as a genuine security iss
 
 The final step of the triage process involves the security analyst performing a comprehensive analysis of the incident. Analysis involves gathering evidence from different sources, conducting external research, and documenting the investigative process. The goal of this step is to gather enough information to make an informed decision to address it. Depending on the severity of the incident, escalation to a level two analyst or a manager might be required. Level two analysts and managers might have more knowledge on using advanced techniques to address the incident. 
 
-### Benefits of triage
+## Benefits of triage
 
 By prioritising incidents based on their potential impact, you can reduce the scope of impact to the organization by ensuring a timely response. Here are some benefits that triage has for security teams: 
 

@@ -4,7 +4,7 @@ tags:
 ---
 Suricata is an open-source [[intrusion detection system]], intrusion prevention system, and network analysis tool.
 
-### Suricata features
+## Suricata features
 
 There are three main ways Suricata can be used:
 
@@ -14,7 +14,7 @@ There are three main ways Suricata can be used:
 
 - *Network security monitoring* ([[NSM]]): In this mode, Suricata helps keep networks safe by producing and saving relevant network logs. Suricata can analyse live network traffic, existing packet capture files, and create and save full or conditional packet captures. This can be useful for forensics, incident response, and for testing signatures. For example, you can trigger an alert and capture the live network traffic to generate traffic logs, which you can then analyse to refine detection signatures.
 
-### Rules 
+## Rules 
 
 Rules or signatures are *used to identify specific patterns, behaviour, and conditions of network traffic* that might indicate malicious activity. The terms rule and signature are often used interchangeably in Suricata. Security analysts use signatures, or patterns associated with malicious activity, to detect and alert on specific malicious activity. Rules can also be used to provide additional context and visibility into systems and networks, helping to identify potential security threats or vulnerabilities. 
 
@@ -28,7 +28,7 @@ Suricata uses signatures analysis, which is a detection method used to find even
 
 ![[Suricata Rule.png]]
 
-### Log files
+## Log files
 
 There are two log files that Suricata generates when alerts are triggered:
 

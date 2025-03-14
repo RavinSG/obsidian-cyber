@@ -1,4 +1,4 @@
-### Auxiliary
+## Auxiliary
 
 Any supporting module, such as *scanners*, *crawlers* and *fuzzers*, can be found here.
 
@@ -31,7 +31,7 @@ $ tree -L 1 /usr/share/metasploit-framework/modules/auxiliary
 21 directories, 2 files
 ```
 
-### Encoders
+## Encoders
 
 Encoders will allow you to encode the exploit and payload in the hope that a *signature-based antivirus solution may miss* them.
 
@@ -54,7 +54,7 @@ $ tree -L 1 /usr/share/metasploit-framework/modules/encoders
 11 directories, 0 files
 ```
 
-### Evasion
+## Evasion
 
 While encoders will encode the payload, they should not be considered a direct *attempt to evade antivirus software*. On the other hand, “evasion” modules will try that, with more or less success.
 
@@ -75,7 +75,7 @@ $ tree -L 2 /usr/share/metasploit-framework/modules/evasion
 2 directories, 9 files
 ```
 
-### Exploits
+## Exploits
 
 Exploits, neatly organised by target system.
 
@@ -110,7 +110,7 @@ $ tree -L 1 /usr/share/metasploit-framework/modules/exploits
 21 directories, 4 files
 ```
 
-### NOPs
+## NOPs
 
 NOPs (No OPeration) do nothing, literally. They are represented in the Intel *x86 CPU family* with 0x90, following which the *CPU will do nothing for one cycle*. They are often used as a **buffer to achieve consistent payload sizes**.
 
@@ -131,7 +131,7 @@ $ tree -L 1 /usr/share/metasploit-framework/modules/nops
 11 directories, 0 files
 ```
 
-### Payloads
+## Payloads
 
 Payloads are *codes that will run on the target system*.
 
@@ -168,7 +168,7 @@ Metasploit has a subtle way to help you identify single (also called “inline�
 The former is an *inline* (or single) payload, as indicated by the “**\_**” between “shell” and “reverse”. 
 While the latter is a *staged* payload, as indicated by the “**/**” between “shell” and “reverse”.
 
-### Post
+## Post
 
 Post modules will be useful on the final stage of the penetration testing process listed above, *post-exploitation*.
 

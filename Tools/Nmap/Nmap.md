@@ -13,7 +13,7 @@ Nmap’s scripting engine can further extend its functionality, from fingerprint
 
 ![[Nmap Functionality.png|400]]
 
-### Discovering Live Hosts
+## Discovering Live Hosts
 
 There are different approaches that Nmap uses to discover live hosts. Such as:
 

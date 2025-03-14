@@ -1,4 +1,4 @@
-### Spoofing
+## Spoofing
 
 In some network setups, you will be able to scan a target system using a spoofed IP address and even a spoofed MAC address. Such a scan is only beneficial in a situation where you can guarantee to capture the response.
 
@@ -12,7 +12,7 @@ When you are on the *same subnet as the target machine*, you would be able to *s
 
 Spoofing only works in a minimal number of cases where certain conditions are met.
 
-### Decoy
+## Decoy
 
 The attacker might resort to using decoys to make it *more challenging to be pinpointed*. The concept is simple, make the scan appear to be coming from many IP addresses so that the attacker’s IP address would be lost among them. As we see in the figure below, the scan of the target machine will appear to be coming from 3 different sources, and consequently, the replies will go the decoys as well.
 

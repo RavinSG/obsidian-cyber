@@ -63,7 +63,7 @@ OPTIONS:
     -h, --help    Help banner.
 ```
 
-### Context
+## Context
 
 Msfconsole is managed by context; this means that unless set as a global variable, all *parameter settings will be lost if you change the module* you have decided to use. In the example below, we have used the `ms17_010_eternalblue` exploit, and we have set parameters such as `RHOSTS`. 
 
@@ -143,14 +143,14 @@ You can leave the context using the `back` command.
 
 Further information on any module can be obtained by typing the `info` command within its context.
 
-### Search
+## Search
 
 One of the most useful commands in msfconsole is [[Search]]
 
-### Database
+## Database
 
 Metasploit has a [[Database]] function to simplify project management and avoid possible confusion when setting up parameter values. 
 
-### Vulnerability Scanning
+## Vulnerability Scanning
 
 Metasploit allows you to quickly identify some critical vulnerabilities that could be considered as “*low hanging fruit*”.  The term “low hanging fruit” usually refers to easily identifiable and exploitable vulnerabilities that could *potentially* allow you to *gain* a *foothold on a system* and, in some cases, gain *high-level privileges* such as root or administrator.

@@ -95,7 +95,7 @@ Same as before, we capture a form post to the server using the Burp Proxy. We ca
 
 ![[Admin Login Request.png]]
 
-### Setting up Macro
+## Setting up Macro
 
 Click on the settings icon on the top right and navigate to sessions. Scroll down and select the Macros pane and click add. We are prompted with the following pane:
 

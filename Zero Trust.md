@@ -16,7 +16,7 @@ In the NIST model:
 
 There are two major Zero Trust planes that you should be aware of: the *Control Plane* and the *Data Plane*.
 
-### Control Plane
+## Control Plane
 
 The Control Plane is composed of four components:
 
@@ -28,7 +28,7 @@ The Control Plane is composed of four components:
   
 - **The Policy Administrator**, which as described in the NIST model, executes decisions made by the policy engine.
 
-### Data Plane
+## Data Plane
 
 - **Implicit trust zones**, which allow use and movement once a subject is authenticated by a Zero Trust Policy Engine
   

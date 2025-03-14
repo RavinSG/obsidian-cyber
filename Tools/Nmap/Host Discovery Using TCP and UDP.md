@@ -1,5 +1,5 @@
 
-### TCP SYN Ping
+## TCP SYN Ping
 
 We can send a **packet with the SYN** (Synchronize) flag set to a TCP port, 80 by default, and wait for a response. An *open port should reply with a SYN/ACK* (Acknowledge); a *closed port would result in an RST* (Reset). In this case, we only check whether we will get any response to infer whether the host is up. 
 
@@ -9,7 +9,7 @@ If we want Nmap to use *TCP SYN ping*, we can do so via the option `-PS` followe
 
 ![[TCP SYN RST.jpeg]]
 
-### TCP ACK Ping
+## TCP ACK Ping
 
 This sends a packet with an **ACK flag set**. You must be running Nmap as a *privileged user* to be able to accomplish this. If you try it as an unprivileged user, Nmap will attempt a 3-way handshake.
 
@@ -17,7 +17,7 @@ By *default, port 80* is used. The syntax is similar to TCP SYN ping. `-PA` shou
 
 The *target responds with the RST* flag set because the TCP packet with the ACK flag is not part of any ongoing connection. 
 
-### UDP Ping
+## UDP Ping
 
 Contrary to TCP SYN ping, sending a UDP packet to an *open port* is **not expected to lead to any reply**. However, if we send a UDP packet to a *closed UDP port*, we **expect to get an ICMP port unreachable** packet; this indicates that the target system is up and available.
 
