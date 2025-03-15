@@ -1,4 +1,3 @@
-
 We are going to use the `crackmapexec` tool to perform the attack using the SMB protocol. However, this can be done via other protocols as well.
 
 ```bash
