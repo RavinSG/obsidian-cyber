@@ -11,7 +11,7 @@ I’m a **PhD student in cybersecurity**, focusing on **threat intelligence, pen
 
 My goal is to continuously expand my knowledge and share insights with the cybersecurity community.  
 
-
+<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2794575" style='border:none;'></iframe> 
 ## 📚 Featured Topics  
 Here are some key sections of my notes:  
 
