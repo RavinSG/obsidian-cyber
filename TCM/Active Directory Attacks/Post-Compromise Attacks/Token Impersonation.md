@@ -226,7 +226,7 @@ SPIDERMAN$:des-cbc-md5:3bba91318019ad4f
 [*] Cleaning up... 
 [*] Stopping service RemoteRegistry
 ```
-
+^fullDump
 
 > [!error] Compromising the Domain
 > We successfully compromised the domain without ever needing to crack the hash or compromising a password of a domain admin in this attack. The only requirement was an admin to be logged on to a compromised domain machine. This usually happens when an admin logs in and switches to another user without logging out.
