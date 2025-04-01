@@ -39,7 +39,7 @@ SMB         192.168.23.130  445    HYDRA-DC         [+] MARVEL.local\fcastle:Pas
 SMB         192.168.23.131  445    THEPUNISHER      [+] MARVEL.local\fcastle:Password1 (Pwn3d!)
 ```
 
-From the `[+]` symbol, we can determine which accounts we were able to login to using the password. The `(Pwn3d!)` indicates which machines we were able to get domain admin in. 
+From the `[+]` symbol, we can determine which accounts we were able to login to using the password. The `(Pwn3d!)` indicates which machines we were able to get local admin in. 
 
 ## Pass the Hash
 

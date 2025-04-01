@@ -7,7 +7,7 @@ Whether you're a beginner in cybersecurity or an experienced professional, I hop
 
 
 ## 🧑‍💻 About Me  
-I’m a **PhD student in cybersecurity**, focusing on **threat intelligence, penetration testing, and security analysis**. I hold the **CompTIA Security+** and **Google Cybersecurity Professional Certificate**, and I’m currently working towards the **Practical Network Penetration Tester (PNPT)** certification.  
+I’m a **PhD student in cybersecurity**, focusing on **threat intelligence, penetration testing, and security analysis**. I hold the *CompTIA Security+* and *Google Cybersecurity Professional Certificate*, and I’m currently working towards the *Practical Network Penetration Tester (PNPT)* certification.  
 
 My goal is to continuously expand my knowledge and share insights with the cybersecurity community.  
 
@@ -16,11 +16,9 @@ My goal is to continuously expand my knowledge and share insights with the cyber
 ## 📚 Featured Topics  
 Here are some key sections of my notes:  
 
-🔹 [[Authentication|Active Directory Basics]]
-🔹 Cyber Threat Intelligence
-🔹 [[Nmap|Security Tools & Techniques]]
-🔹 [[Steel Mountain|CTF Writeups & Challenges]]
-🔹 Incident Response & Forensics 
+- [[Home|Practical Ethical Hacking]]
+- [[Tools/Index|Security Tools & Techniques]]
+- [[WriteUps/Index|CTF Writeups & Challenges]]
 
 Click on any topic to explore!  
 
@@ -41,4 +39,4 @@ Let’s learn and grow together in the world of cybersecurity! 🚀
 
 ---
 
-*(Last updated: 2025-03-27)*
+*(Last updated: 2025-04-01)*
