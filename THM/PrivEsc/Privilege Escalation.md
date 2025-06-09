@@ -36,7 +36,7 @@ Options:
 
 #### LD_PRELOAD
 
-On some systems, you may see the LD_PRELOAD environment option.
+On some systems, you may see the LD_PRELOAD environment option. ^f03211
 
 ```bash
 useradebian:/home$ sudo -l
