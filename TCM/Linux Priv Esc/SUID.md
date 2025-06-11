@@ -126,3 +126,11 @@ root
 
 ## Binary Symlinks
 
+We can exploit a tool that uses a SUID binary to gain root access by overwriting a file that is used by the tool.
+
+For example, `Nginx < 1.6.2`  has a vulnerability where the `/var/log/nginx/` log directory is owned by `www-data`. Since logging is handled by the master process that runs as `root`, we can manipulate the logging process if we have compromised the `www-data` user.
+
+We can remove the existing log file and create a symlink to the location that points to a shell code. When an error occurs and the master process tried to write it to the error log, instead it executed the command in a shell with the SUID set. Enabling the attacker to gain root access. For more info read [this](https://legalhackers.com/advisories/Nginx-Exploit-Deb-Root-PrivEsc-CVE-2016-1247.html).
+
+## Environmental Variables
+
