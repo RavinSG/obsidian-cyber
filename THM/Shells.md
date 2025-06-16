@@ -38,6 +38,14 @@ This technique is applicable only to Linux boxes, as they will nearly always hav
 3. Finally (and most importantly) we will background the shell using `Ctrl + Z`. Back in our own terminal we use `stty raw -echo; fg`. This does two things: first, it *turns off our own terminal echo* (which gives us access to tab autocompletes, the arrow keys, and Ctrl + C to kill processes). It then *foregrounds the shell*, thus completing the process.
 
 ![[Shell Stabilisation Python.png]]
+
+
+```bash
+python -c 'import pty;pty.spawn("/bin/bash")'
+export TERM=xterm
+#Ctrl + Z
+stty raw -echo; fg
+```
 #### rlwrap
 
 *rlwrap* is a program which, in simple terms, gives us access to history, tab autocompletion and the arrow keys immediately upon receiving a shell; however, some manual stabilisation must still be utilised if you want to be able to use `Ctrl + C` inside the shell. rlwrap is *not installed by default* on Kali, so first install it with sudo apt install rlwrap.
