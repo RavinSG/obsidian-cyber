@@ -340,3 +340,54 @@ We can use a tool like **plink** or **meterpreter** to perform port forwarding t
 
 ## Password Hunting
 
+Here are some commands that we can use to search for cleartext passwords stored in a machine. Read more [here](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#eop-looting-for-passwords) for more details.
+
+```
+c:\Windows\System32>findstr /si password *.txt *.ini *.config
+
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password.";
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          >> Msg1="Please enter your password.";
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                    Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                           Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1                           Please enter your password.
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:          Msg1="Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_hash_tables.help.txt:        Msg1                           "Please enter your password."
+WindowsPowerShell\v1.0\en-US\about_remote_FAQ.help.txt:    name and password credentials on the local computer or the credentials
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:    2. Verify that a password is set on the workgroup-based computer. If a
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:       password is not set or the password value is empty, you cannot run
+WindowsPowerShell\v1.0\en-US\about_remote_troubleshooting.help.txt:       To set password for your user account, use User Accounts in Control
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:          function ScreenPassword($instance)
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:          foreach ($a in @(get-wmiobject win32_desktop)) { ScreenPassword($a) }
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      This script checks each user account. The ScreenPassword function returns 
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      the name of any user account that does not have a password-protected 
+WindowsPowerShell\v1.0\en-US\about_Return.help.txt:      screen saver. If the screen saver is password protected, the function 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    The MakeCert.exe tool will prompt you for a private key password. The 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    password ensures that no one can use or access the certificate without
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    your consent. Create and enter a password that you can remember. You will 
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:    use this password later to retrieve the certificate.
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:        6. Type a password, and then type it again to confirm.
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:        4. On the Password page, select "Enable strong private key protection",
+WindowsPowerShell\v1.0\en-US\about_Signing.help.txt:           and then enter the password that you assigned during the export 
+FINDSTR: Cannot open restore\MachineGuid.txt
+```
+
+
+Also, the following are a set of files that we can look into check whether there are any passwords stored.
+
+```
+c:\sysprep.inf
+c:\sysprep\sysprep.xml
+c:\unattend.xml
+%WINDIR%\Panther\Unattend\Unattended.xml
+%WINDIR%\Panther\Unattended.xml
+
+dir c:\*vnc.ini /s /b
+dir c:\*ultravnc.ini /s /b 
+dir c:\ /s /b | findstr /si *vnc.ini
+```
+
+
+## AV Enumeration
+
