@@ -37,7 +37,7 @@
 - [[Cron Jobs]]
 - [[Docker]]
 - [[TCM/Linux Priv Esc/Initial Enumeration|Initial Enumeration]]
-- [[Kernel Exploits]]
+- [[TCM/Linux Priv Esc/Kernel Exploits]]
 - [[Password and File Permissions]]
 - [[Root Squash]]
 - [[Sudo]]
