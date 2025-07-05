@@ -14,6 +14,7 @@ There are several tools we can use to automate discovery. These can be in severa
 	  
 3. Other
 	- [windows-exploit-suggester.py](https://github.com/AonCyberLabs/Windows-Exploit-Suggester) (EoL since Python2 is no longer supported)
+	- [wesng](https://github.com/bitsadmin/wesng) (Updated wes for python3)
 	- [Exploit Suggester](https://blog.rapid7.com/2015/08/11/metasploit-local-exploit-suggester-do-less-get-more/) (Metasploit)
 
 Since automated tools need some pre-requisites to run, some might not run on every machine. Hence, it is always better to try a few of them without sticking to one or two.
