@@ -340,7 +340,7 @@ We can use a tool like **plink** or **meterpreter** to perform port forwarding t
 
 ## Password Hunting
 
-Here are some commands that we can use to search for cleartext passwords stored in a machine. Read more [here](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#eop-looting-for-passwords) for more details.
+Here are some commands that we can use to search for cleartext passwords stored in a machine. Read more [here](https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/windows-privilege-escalation/#eop-looting-for-passwords) for more details.^passHunt ^650019
 
 ```
 c:\Windows\System32>findstr /si password *.txt *.ini *.config
