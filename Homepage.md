@@ -39,4 +39,4 @@ Let’s learn and grow together in the world of cybersecurity! 🚀
 
 ---
 
-*(Last updated: 2025-07-01)*
+*(Last updated: 2025-07-11)*

