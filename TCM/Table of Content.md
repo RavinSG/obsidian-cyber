@@ -45,4 +45,10 @@
 
 ## Windows Privilege Escalation
 
+- [[Automated Tools]]
+- [[getsystem]]
 - [[TCM/Windows Priv Esc/Initial Enumeration|Initial Enumeration]]
+- [[TCM/Windows Priv Esc/Kernel Exploits|Kernel Exploits]]
+- [[Password Hunting]]
+- [[RunAs]]
+- [[Windows Subsystem for Linux]]

