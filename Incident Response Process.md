@@ -3,7 +3,7 @@ The first step toward a mature incident response capability for most organisatio
 
 ![[Incident Response Life cycle.png]]
 
-The figure above shows the six steps of the [[Incident Response Lifecycle|incident response process]].
+The figure above shows the six steps of the [[Incident Response Lifecycle]].
 
 1. **Preparation**. In this phase, you *build the tools, processes, and procedures* to respond to an incident. That includes building and training an incident response team, conducting exercises, documenting what you will do and how you will respond, and acquiring, configuring, and operating security tools and incident response capabilities.
    

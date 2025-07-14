@@ -2,7 +2,7 @@
 aliases:
   - SOC
 ---
-A security operations centre (**SOC**) is an organisational unit dedicated to monitoring networks, systems, and devices for security threats or attacks. Structurally, a SOC (usually pronounced "sock") often *exists as its own separate unit or within a [[Computer Security Incident Response Teams|CSIRT]]*. You may be familiar with the term blue team, which refers to the security professionals who are responsible for defending against all security threats and attacks at an organization. A SOC is involved in various types of blue team activities, such as network monitoring, analysis, and response to incidents. 
+A [[Security Operations]] centre (**SOC**) is an organisational unit dedicated to monitoring networks, systems, and devices for security threats or attacks. Structurally, a SOC (usually pronounced "sock") often *exists as its own separate unit or within a [[Computer Security Incident Response Teams|CSIRT]]*. You may be familiar with the term blue team, which refers to the security professionals who are responsible for defending against all security threats and attacks at an organization. A SOC is involved in various types of blue team activities, such as network monitoring, analysis, and response to incidents. 
 
 ![[SOC.png]]
 

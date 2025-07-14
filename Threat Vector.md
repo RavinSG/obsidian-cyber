@@ -1,4 +1,4 @@
-Threat actors targeting an organization need some means to gain access to that organisation's information or systems. Threat vectors are the means that threat actors use to obtain that access.
+Threat actors targeting an organisation need some means to gain access to that organisation's information or systems. Threat vectors are the means that threat actors use to obtain that access.
 
 ### Message-Based Threat Vectors
 **Email** is one of the most commonly exploited threat vectors. *Phishing messages, spam messages*, and other email-borne attacks are a simple way to gain access to an organisation's network.
@@ -36,5 +36,5 @@ Attackers may gain access to *hardware devices* at the *manufacturer or while th
 
 Supply chain attacks may also target software providers inserting vulnerabilities into software before it is released or deploying backdoors through official updates and patching mechanisms. Attackers who infiltrate [[Managed Service Providers]] (MSPs) may also be able to use their access to the MSP network to leverage access that the MSP has to its customers' systems.
 
-Other issues may also arise in the supply chain, particularly if a *vendor fails to continue to support a system* that the organization depends on, fails to *provide required system integrations*, or *fails to provide adequate security for outsourced code development or data*
+Other issues may also arise in the supply chain, particularly if a *vendor fails to continue to support a system* that the organisation depends on, fails to *provide required system integrations*, or *fails to provide adequate security for outsourced code development or data*
 *storage*.

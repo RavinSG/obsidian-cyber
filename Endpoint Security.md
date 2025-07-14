@@ -1,5 +1,5 @@
 
-Protecting endpoints in your organization is a significant portion of the daily tasks for many security professionals. 
+Protecting endpoints in your organisation is a significant portion of the daily tasks for many security professionals. 
 
 For most organisations, endpoints significantly outnumber the servers and network devices, and since end users control or use them, they also have a wide variety of threats that they face that a server is unlikely to deal with.
 

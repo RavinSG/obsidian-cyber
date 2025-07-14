@@ -17,6 +17,7 @@ My goal is to continuously expand my knowledge and share insights with the cyber
 Here are some key sections of my notes:  
 
 - [[Home|Practical Ethical Hacking]]
+- [[Cybersecurity Learning Path]]
 - [[Tools/Index|Security Tools & Techniques]]
 - [[WriteUps/Index|CTF Writeups & Challenges]]
 
