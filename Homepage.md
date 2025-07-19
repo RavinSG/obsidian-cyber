@@ -16,7 +16,7 @@ My goal is to continuously expand my knowledge and share insights with the cyber
 ## 📚 Featured Topics  
 Here are some key sections of my notes:  
 
-- [[Home|Practical Ethical Hacking]]
+- [[Table of Content| PNPT Notes]]
 - [[Cybersecurity Learning Path]]
 - [[Tools/Index|Security Tools & Techniques]]
 - [[WriteUps/Index|CTF Writeups & Challenges]]
@@ -40,4 +40,4 @@ Let’s learn and grow together in the world of cybersecurity! 🚀
 
 ---
 
-*(Last updated: 2025-07-14)*
+*(Last updated: 2025-07-16)*

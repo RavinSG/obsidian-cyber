@@ -1,4 +1,6 @@
 
+This page contains all the notes I have taken while getting ready for the PNPT exam
+
 ## Active Directory Attacks
 
 ### Initial Attack Vectors
@@ -46,9 +48,14 @@
 ## Windows Privilege Escalation
 
 - [[Automated Tools]]
+- [[DLL Hijacking]]
+- [[Executable Files]]
 - [[getsystem]]
 - [[TCM/Windows Priv Esc/Initial Enumeration|Initial Enumeration]]
 - [[TCM/Windows Priv Esc/Kernel Exploits|Kernel Exploits]]
 - [[Password Hunting]]
+- [[Registry]]
 - [[RunAs]]
+- [[Service Escalation]]
+- [[Startup Applications]]
 - [[Windows Subsystem for Linux]]
